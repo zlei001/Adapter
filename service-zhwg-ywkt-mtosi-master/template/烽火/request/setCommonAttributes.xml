@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.tmforum.org/mtop/fmw/xsd/hdr/v1" xmlns:v11="http://www.tmforum.org/mtop/rp/xsd/crp/v1" xmlns:v12="http://www.tmforum.org/mtop/fmw/xsd/nam/v1" xmlns:v13="http://www.tmforum.org/mtop/fmw/xsd/cosd/v1" xmlns:v14="http://www.tmforum.org/mtop/fmw/xsd/gen/v1" xmlns:v15="http://www.tmforum.org/mtop/nrb/xsd/crmd/v1">
+   <soapenv:Header>
+      <v1:header>
+        <v1:security>admin:admin</v1:security>
+         <v1:communicationPattern>SimpleResponse</v1:communicationPattern>
+         <v1:communicationStyle>RPC</v1:communicationStyle>
+      </v1:header>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v11:setCommonAttributesRequest>
+         <!--Optional:-->
+         <v11:objectRef>
+            <!--Zero or more repetitions:-->
+           <v12:rdn>
+               <v12:type>MD</v12:type>
+               <v12:value>1</v12:value>
+            </v12:rdn>
+          
+            <v12:rdn>
+               <v12:type>ME</v12:type>
+               <v12:value>6432683f-f7fc-44d2-b04b-afa9eed5a2dd</v12:value>
+            </v12:rdn>                        
+         </v11:objectRef>
+         <!--Optional:-->
+         <v11:modifyData>
+            <!--Optional:-->
+
+            <!--Optional:-->
+            <v13:vendorExtensions>
+               <!--You may enter ANY elements at this point-->
+               <nvsList>
+                  <nvs>
+                     <name>LSRID</name>
+                     <value>111.222.121.133</value>
+                  </nvs>
+               </nvsList>
+              
+            </v13:vendorExtensions>
+          
+         </v11:modifyData>
+      </v11:setCommonAttributesRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,51 @@
+
+########此配置文件先于application.yml加载########
+api:
+  title: 综合网管-网管业务场景微服务
+
+server:
+  port: 9536
+  servlet:
+    context-path: /service-zhwg-ywkt-actn
+  error:
+    include-stacktrace: always
+  tomcat:
+    useRelativeRedirects: true
+#其他公共配置在config-server
+eureka:
+  instance:
+    status-page-url: http://${spring.cloud.client.ip-address}:${server.port}${server.servlet.context-path:}/swagger-ui.html
+  client:
+    serviceUrl:
+      defaultZone:  http://admin:1@172.168.27.251:26065/eureka/
+spring:
+  application:
+    name: service-zhwg-ywkt-actn
+  cloud:
+    config:
+      name: application
+      profile: common,zhwg_ywkt,zhwg_ywkt_zqotn
+      username: admin     #配置中心的用户名
+      password: 1       #配置中心的密码
+      discovery:
+        enabled: true   #开启Config服务发现支持
+        service-id: config-server   # 配置中心的servieId，即服务名。
+
+security:
+  basic:
+    filterPath: /${server.prefix:${spring.application.name:}}/**     #【扩展属性】, **要两个才能匹配后面所有，如果只有一个则测试过多个/时不行，要拦截的路径，多个则逗号隔开,如果注释则默认所有路径都不拦截
+    allowPath: /**,/panoramicMap/**  #【扩展属性】，不拦截的路径，可以不配置，不配则默认为除拦截路径以外的其他路径，多个则逗号隔开
+  oauth2:
+    resource:
+      #拦截器顺序，@EnableResourceServer 指定resourceId 时如果不传token就可以访问或者传了token没效果 则需要配置这个顺序=3,
+      filter-order: 3
+
+#密码加密的盐值
+jasypt:
+  encryptor:
+    password: cttnet-dbpw
+
+#日志
+logging:
+  file: logs/${spring.application.name}-${server.port}.log
+  config: classpath:logback-custom.xml

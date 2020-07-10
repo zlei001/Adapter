@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.tmforum.org/mtop/fmw/xsd/hdr/v1" xmlns:v11="http://www.tmforum.org/mtop/rtm/xsd/pr/v1" xmlns:v12="http://www.tmforum.org/mtop/fmw/xsd/nam/v1">
+   <soapenv:Header>
+      <v1:header>
+         <v1:security>${#Project#security}</v1:security>       	
+	    <v1:communicationPattern>SimpleResponse</v1:communicationPattern>
+	    <v1:communicationStyle>RPC</v1:communicationStyle>
+      </v1:header>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v11:retrieveSwitchDataRequest>
+         <!--Optional:-->
+         <v11:reliableSinkCtpOrGroupRef>
+            <!--Zero or more repetitions:-->
+            <v12:rdn>
+               <v12:type>MD</v12:type>
+               <v12:value>1</v12:value>
+            </v12:rdn>
+            <v12:rdn>
+               <v12:type>ME</v12:type>
+               <v12:value>b5f4e324-77b6-4fc1-9cec-468099596ac7</v12:value>
+            </v12:rdn>
+            <v12:rdn>
+               <v12:type>PG</v12:type>
+               <v12:value>e4c5a4db-f7d8-49a5-b1e5-f9a5ac269115</v12:value>
+            </v12:rdn>
+         </v11:reliableSinkCtpOrGroupRef>
+      </v11:retrieveSwitchDataRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

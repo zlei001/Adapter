@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.tmforum.org/mtop/fmw/xsd/hdr/v1" xmlns:v11="http://www.tmforum.org/mtop/rtm/xsd/mc/v1" xmlns:v12="http://www.tmforum.org/mtop/fmw/xsd/nam/v1">
+    <soapenv:Header>
+        <v1:header>
+            <v1:security>${#Project#security}</v1:security>
+            <v1:communicationStyle>RPC</v1:communicationStyle>
+            <v1:communicationPattern>SimpleResponse</v1:communicationPattern>
+        </v1:header>
+    </soapenv:Header>
+    <soapenv:Body>
+        <v11:disablePRBSTestRequest>
+            <!--Optional:-->
+            <v11:tpName>
+                <!--Zero or more repetitions:-->
+                <v12:rdn>
+                    <v12:type>MD</v12:type>
+                    <v12:value>1</v12:value>
+                </v12:rdn>
+                <v12:rdn>
+                    <v12:type>ME</v12:type>
+                    <v12:value>0a9a4094-f319-4586-8989-5c157faf3094</v12:value>
+                </v12:rdn>
+                <v12:rdn>
+                    <v12:type>PTP</v12:type>
+                    <v12:value>/rack=1/shelf=6/slot=0X5B/port=4</v12:value>
+                </v12:rdn>
+                <v12:rdn>
+                    <v12:type>CTP</v12:type>
+                    <v12:value>/och=1/odu4=1</v12:value>
+                </v12:rdn>
+            </v11:tpName>
+        </v11:disablePRBSTestRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

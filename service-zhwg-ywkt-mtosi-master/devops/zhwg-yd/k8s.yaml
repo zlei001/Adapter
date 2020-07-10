@@ -1,0 +1,57 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: service-zhwg-topo
+  labels:
+    app: service-zhwg-topo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: service-zhwg-topo
+  template:
+    metadata:
+      labels:
+        app: service-zhwg-topo
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ''
+    spec: 
+      containers:
+      - name: service-zhwg-topo
+        image: IMAGENAME:latest
+        imagePullPolicy: Always
+        args:
+        - --server.port=9535
+        - --eureka.instance.prefer-ip-address=true
+        - --eureka.instance.ip-address=10.15.2.170
+        - --eureka.instance.hostname=10.15.2.170
+        - --eureka.instance.nonSecurePort=41010
+        - --eureka.instance.instance-id=${eureka.instance.ip-address}:${eureka.instance.nonSecurePort}
+        - --eureka.client.serviceUrl.defaultZone=http://admin:1@eureka-server-svc.default.svc.cluster.local:8761/eureka/
+        ports:
+        - containerPort: 9535
+        env:
+        - name: TZ
+          value: "Asia/Shanghai"
+        resources:
+          requests:
+            memory: 512Mi
+          limits:
+            memory: 4096Mi
+---          
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: service-zhwg-topo-svc
+  name: service-zhwg-topo-svc
+spec:
+  selector:
+    app: service-zhwg-topo
+  type: NodePort
+  ports:
+  - name: service-zhwg-topo-port
+    port: 9535
+    protocol: TCP
+    targetPort: 9535
+    nodePort: 41010

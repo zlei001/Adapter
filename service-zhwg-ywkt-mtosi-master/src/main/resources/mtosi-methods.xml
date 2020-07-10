@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<base id="methods" caption="方法所属接口表" hint="">
+    <ConnectionControl>
+        activateCrossConnection,
+        activateSubnetworkConnection,
+        createAndActivateCrossConnection,
+        createAndActivateSubnetworkConnection,
+        deactivateCrossConnection,
+        deactivateSubnetworkConnection,
+        deactivateAndDeleteCrossConnection,
+        deactivateAndDeleteSubnetworkConnection,
+    </ConnectionControl>
+
+    <ConnectionRetrieval>
+        getAllCrossConnections,
+        getAllSubnetworkConnections,
+        getRoute,
+        getSubnetworkConnection,
+    </ConnectionRetrieval>
+
+    <TerminationPointRetrieval>
+        getAllPhysicalTerminationPointsWithoutFtps,
+        getContainedPotentialConnectionTerminationPoints,
+        getAvailableTimeSlot,
+        getTerminationPoint,
+        getAllFloatingTerminationPoints,
+    </TerminationPointRetrieval>
+
+    <TerminationPointControl>
+        setTerminationPointData,
+    </TerminationPointControl>
+
+    <MaintenanceControl>
+        performMaintenanceOperation,
+        measureRoundTripDelay,
+        enablePRBSTest,
+        disablePRBSTest,
+        getActiveMaintenanceOperations,
+    </MaintenanceControl>
+
+    <MaintenanceRetrieval>
+        getPRBSTestResult,
+        getRoundTripDelayResult,
+    </MaintenanceRetrieval>
+
+    <ProtectionControl>
+        createProtectionGroup,
+        modifyProtectionGroup,
+        deleteProtectionGroup,
+        performProtectionCommand,
+        performEquipmentProtectionCommand,
+        createEquipmentProtectionGroup,
+        deleteEquipmentProtectionGroup,
+    </ProtectionControl>
+
+    <ProtectionRetrieval>
+        getAllProtectionGroups,
+        getProtectionGroup,
+        retrieveSwitchData,
+        retrieveEquipmentSwitchData,
+        getEquipmentProtectionGroup,
+        getAllEquipmentProtectionGroups,
+    </ProtectionRetrieval>
+
+    <ManagementDomainRetrieval>
+        getAllManagementDomains
+    </ManagementDomainRetrieval>
+
+    <TopologicalLinkControl>
+        createTopologicalLink,
+        deleteTopologicalLink
+    </TopologicalLinkControl>
+
+    <TopologicalLinkRetrieval>
+        getAllTopologicalLinks,
+        getTopologicalLink,
+    </TopologicalLinkRetrieval>
+
+    <ManagedElementRetrieval>
+        getAllManagedElements,
+        getAllCCCapacity,
+    </ManagedElementRetrieval>
+
+    <CommonResourceProvisioning>
+        setCommonAttributes,
+    </CommonResourceProvisioning>
+
+    <AlarmControl>
+        setAlarmReporting,
+    </AlarmControl>
+
+    <AlarmRetrieval>
+        syncActiveAlarmFromNE,
+        getAlarmReporting,
+        getActiveAlarms
+    </AlarmRetrieval>
+
+    <AlarmHandling>
+        acknowledgeAlarms,
+        unacknowledgeAlarms
+    </AlarmHandling>
+
+    <ThresholdCrossingAlertControl>
+        setTcaTpParameter,
+        getTcaTpParameter,
+    </ThresholdCrossingAlertControl>
+
+    <PerformanceManagementControl>
+        disablePerformanceMonitoringData,
+        enablePerformanceMonitoringData,
+    </PerformanceManagementControl>
+
+    <PerformanceManagementRetrieval>
+        getAllPerformanceMonitoringPoints,
+        getAllCurrentPerformanceMonitoringData,
+        getHistoryPerformanceMonitoringData
+    </PerformanceManagementRetrieval>
+
+    <MultiLayerSubnetworkRetrieval>
+        getAllTopoNodeList,
+        takeOverSNC,
+        getAllTopLevelMultiLayerSubnetworks,
+    </MultiLayerSubnetworkRetrieval>
+
+    <EquipmentInventoryRetrieval>
+        getAllEquipment,
+        getEquipment,
+    </EquipmentInventoryRetrieval>
+</base>

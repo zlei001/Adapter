@@ -1,0 +1,41 @@
+
+########此配置文件先于application.yml加载########
+
+#其他公共配置在config-server
+eureka:
+  instance:
+    prefer-ip-address: true
+    status-page-url-path: http://${spring.cloud.client.ip-address}:${server.port}/swagger-ui.html
+  #    ip-address:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:1@172.168.27.251:26065/eureka/
+
+server:
+  port: 8722
+  prefix: service-zhwg-ywkt-mtosi
+  error:
+    include-stacktrace: always
+spring:
+  application:
+    name: service-zhwg-ywkt-mtosi
+  cloud:
+    config:
+      name: application
+      profile: common,zhwg_ywkt
+      username: admin     #配置中心的用户名
+      password: 1       #配置中心的密码
+      discovery:
+        enabled: true   #开启Config服务发现支持
+        service-id: config-server   # 配置中心的servieId，即服务名。
+  main:
+    allow-bean-definition-overriding: true
+
+security:
+  basic:
+#    filterPath: /${server.prefix:${spring.application.name}}     #【扩展属性】, **要两个才能匹配后面所有，如果只有一个则测试过多个/时不行，要拦截的路径，多个则逗号隔开,如果注释则默认所有路径都不拦截
+#    allowPath: /**   #【扩展属性】，不拦截的路径，可以不配置，不配则默认为除拦截路径以外的其他路径，多个则逗号隔开
+  oauth2:
+    resource:
+      #拦截器顺序，@EnableResourceServer 指定resourceId 时如果不传token就可以访问或者传了token没效果 则需要配置这个顺序=3,
+      filter-order: 3

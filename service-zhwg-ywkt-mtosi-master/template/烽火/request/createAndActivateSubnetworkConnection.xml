@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.tmforum.org/mtop/fmw/xsd/hdr/v1" xmlns:v11="http://www.tmforum.org/mtop/rp/xsd/conc/v1" xmlns:v12="http://www.tmforum.org/mtop/fmw/xsd/cosd/v1" xmlns:v13="http://www.tmforum.org/mtop/fmw/xsd/gen/v1" xmlns:v14="http://www.tmforum.org/mtop/fmw/xsd/cocd/v1" xmlns:v15="http://www.tmforum.org/mtop/fmw/xsd/nam/v1" xmlns:v16="http://www.tmforum.org/mtop/nrb/xsd/crcd/v1" xmlns:v17="http://www.tmforum.org/mtop/nrf/xsd/cc/v1" xmlns:v18="http://www.tmforum.org/mtop/nrf/xsd/com/v1" xmlns:v19="http://www.tmforum.org/mtop/nrf/xsd/tpdata/v1" xmlns:v110="http://www.tmforum.org/mtop/nrb/xsd/lp/v1">
+    <soapenv:Header>
+        <v1:header>
+            <v1:security>admin:admin</v1:security>
+            <v1:communicationPattern>SimpleResponse</v1:communicationPattern><v1:communicationStyle>RPC</v1:communicationStyle>
+        </v1:header>
+    </soapenv:Header>
+    <soapenv:Body>
+        <v11:createAndActivateSubnetworkConnectionRequest>
+            <!--Optional:-->
+            <v11:createData>
+                <!--Optional:-->
+                <v12:userLabel xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                <!--Optional:-->
+                <v12:isForceUniqueness>false</v12:isForceUniqueness>
+                <!--Optional:-->
+                <v12:owner xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                <!--Optional:-->
+                <v12:aliasNameList>
+                    <!--Zero or more repetitions:-->
+                    <v13:alias>
+                        <v13:aliasName>nativeEMSName</v13:aliasName>
+                        <v13:aliasValue>otu2s-s1-client</v13:aliasValue>
+                    </v13:alias>
+                </v12:aliasNameList>
+                <!--Optional:-->
+                <v12:vendorExtensions>
+                    <!--You may enter ANY elements at this point-->
+                    <nvsList>
+                        <nvs>
+                            <name>ClientServiceContainer</name>
+                            <value>ODU2</value>
+                        </nvs>
+                        <nvs>
+                            <name>ClientServiceMappingMode</name>
+                            <value>BMP</value>
+                        </nvs>
+                        <nvs>
+                            <name>ClientServiceType</name>
+                            <value>STM-64</value>
+                        </nvs>
+                    </nvsList>
+                </v12:vendorExtensions>
+                <!--Optional:-->
+
+                <!--Optional:-->
+                <v16:networkAccessDomain xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                <!--Optional:-->
+                <v11:direction>CD_BI</v11:direction>
+                <!--Optional:-->
+                <v11:staticProtectionLevel extension="">UNPROTECTED</v11:staticProtectionLevel>
+
+                <v11:rerouteAllowed>RR_NA</v11:rerouteAllowed>
+                <!--Optional:-->
+                <v11:networkRouted>NR_NA</v11:networkRouted>
+                <!--Optional:-->
+                <v11:type>ST_SIMPLE</v11:type>
+                <!--Optional:-->
+                <v11:layerRate extension="">LR_DIGITAL_SIGNAL_RATE</v11:layerRate>
+                <!--Optional:-->
+                <v11:ccInclusionList>
+                    <v18:cc>
+                        <!--                  <v18:name/>-->
+                        <!--                  <v18:userLabel/>-->
+                        <!--                  <v18:aliasNameList/>-->
+                        <v18:isActive>true</v18:isActive>
+                        <v18:direction>CD_UNI</v18:direction>
+                        <v18:ccType>ST_SIMPLE</v18:ccType>
+                        <v18:aEndRefList>
+                            <v18:aEndName>
+                                <v15:rdn>
+                                    <v15:type>MD</v15:type>
+                                    <v15:value>1</v15:value>
+                                </v15:rdn>
+                                <v15:rdn>
+                                    <v15:type>ME</v15:type>
+                                    <v15:value>55734412-0209-4610-bea3-8df261996359</v15:value>
+                                </v15:rdn>
+                                <v15:rdn>
+                                    <v15:type>PTP</v15:type>
+                                    <v15:value>/rack=1/shelf=1/slot=0X1D/port=1</v15:value>
+                                </v15:rdn>
+                                <v15:rdn>
+                                    <v15:type>CTP</v15:type>
+                                    <v15:value>/och=1</v15:value>
+                                </v15:rdn>
+                            </v18:aEndName>
+                        </v18:aEndRefList>
+                        <v18:zEndRefList>
+                            <v18:zEndName>
+                                <v15:rdn>
+                                    <v15:type>MD</v15:type>
+                                    <v15:value>1</v15:value>
+                                </v15:rdn>
+                                <v15:rdn>
+                                    <v15:type>ME</v15:type>
+                                    <v15:value>55734412-0209-4610-bea3-8df261996359</v15:value>
+                                </v15:rdn>
+                                <v15:rdn>
+                                    <v15:type>PTP</v15:type>
+                                    <v15:value>/rack=1/shelf=1/slot=0X09/port=1</v15:value>
+                                </v15:rdn>
+                                <v15:rdn>
+                                    <v15:type>CTP</v15:type>
+                                    <v15:value>/och=1/odu4=1/odu2=10</v15:value>
+                                </v15:rdn>
+                            </v18:zEndName>
+                        </v18:zEndRefList>
+                    </v18:cc>
+                    <v18:cc>
+                        <!--                  <v18:name/>-->
+                        <!--                  <v18:userLabel/>-->
+                        <!--                  <v18:aliasNameList/>-->
+                        <v18:isActive>true</v18:isActive>
+                        <v18:direction>CD_UNI</v18:direction>
+                        <v18:ccType>ST_SIMPLE</v18:ccType>
+                        <v18:aEndRefList>
+                            <v18:aEndName>
+                                <v15:rdn>
+                                    <v15:type>MD</v15:type>
+                                    <v15:value>1</v15:value>
+                                </v15:rdn>
+                                <v15:rdn>
+                                    <v15:type>ME</v15:type>
+                                    <v15:value>9b87e987-de4f-47f2-b3c9-4c30dbe08d86</v15:value>
+                                </v15:rdn>
+                                <v15:rdn>
+                                    <v15:type>PTP</v15:type>
+                                    <v15:value>/rack=1/shelf=1/slot=0X1D/port=1</v15:value>
+                                </v15:rdn>
+                                <v15:rdn>
+                                    <v15:type>CTP</v15:type>
+                                    <v15:value>/odu2=1</v15:value>
+                                </v15:rdn>
+                            </v18:aEndName>
+                        </v18:aEndRefList>
+                        <v18:zEndRefList>
+                            <v18:zEndName>
+                                <v15:rdn>
+                                    <v15:type>MD</v15:type>
+                                    <v15:value>1</v15:value>
+                                </v15:rdn>
+                                <v15:rdn>
+                                    <v15:type>ME</v15:type>
+                                    <v15:value>9b87e987-de4f-47f2-b3c9-4c30dbe08d86</v15:value>
+                                </v15:rdn>
+                                <v15:rdn>
+                                    <v15:type>PTP</v15:type>
+                                    <v15:value>/rack=1/shelf=1/slot=0X12/port=1</v15:value>
+                                </v15:rdn>
+                                <v15:rdn>
+                                    <v15:type>CTP</v15:type>
+                                    <v15:value>/odu2=1</v15:value>
+                                </v15:rdn>
+                            </v18:zEndName>
+                        </v18:zEndRefList>
+                    </v18:cc>
+                </v11:ccInclusionList>
+
+                <!--            <v11:inclusionResourceRefList>-->
+                <!--            </v11:inclusionResourceRefList>-->
+                <!--             <v11:exclusionResourceRefList>-->
+                <!--            </v11:exclusionResourceRefList>-->
+                <v11:isFullRoute>true</v11:isFullRoute>
+
+                <!--Optional:-->
+                <v11:aEndTpRefList>
+                    <v15:name>
+                        <v15:rdn>
+                            <v15:type>MD</v15:type>
+                            <v15:value>1</v15:value>
+                        </v15:rdn>
+                        <v15:rdn>
+                            <v15:type>ME</v15:type>
+                            <v15:value>55734412-0209-4610-bea3-8df261996359</v15:value>
+                        </v15:rdn>
+                        <v15:rdn>
+                            <v15:type>PTP</v15:type>
+                            <v15:value>/rack=1/shelf=1/slot=0X02/port=4</v15:value>
+                        </v15:rdn>
+                        <v15:rdn>
+                            <v15:type>CTP</v15:type>
+                            <v15:value>/odu2=1</v15:value>
+                        </v15:rdn>
+                    </v15:name>
+                </v11:aEndTpRefList>
+                <v11:zEndTpRefList>
+                    <v15:name>
+                        <v15:rdn>
+                            <v15:type>MD</v15:type>
+                            <v15:value>1</v15:value>
+                        </v15:rdn>
+                        <v15:rdn>
+                            <v15:type>ME</v15:type>
+                            <v15:value>9b87e987-de4f-47f2-b3c9-4c30dbe08d86</v15:value>
+                        </v15:rdn>
+                        <v15:rdn>
+                            <v15:type>PTP</v15:type>
+                            <v15:value>/rack=1/shelf=1/slot=0X12/port=1</v15:value>
+                        </v15:rdn>
+                        <v15:rdn>
+                            <v15:type>CTP</v15:type>
+                            <v15:value>/och=1/odu4=1/odu2=10</v15:value>
+                        </v15:rdn>
+                    </v15:name>
+                </v11:zEndTpRefList>
+            </v11:createData>
+        </v11:createAndActivateSubnetworkConnectionRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

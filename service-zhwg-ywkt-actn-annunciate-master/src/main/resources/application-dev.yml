@@ -1,0 +1,18 @@
+## 开发环境
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:1@172.168.63.92:9061/eureka/
+spring:
+  application:
+    # 开发环境修改该配置，一般加名称后缀
+    name: service-zhwg-ywkt-nce-heart
+logging:
+  level:
+    # 开发环境输出debug日志
+    com.cttnet: DEBUG
+
+actn:
+  hw:
+    # 网管名, 系统调用使用 JAD环境
+    ems-name: 华为NCE网管

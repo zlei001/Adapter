@@ -1,0 +1,94 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: ceph-rbd-gd-1
+type: "kubernetes.io/rbd"
+data:
+  key: QVFCdkxDZGR3VHlMTkJBQVdocEhoQ0NBNzVKZ2hHQk9nd243S3c9PQ==
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: service-zhwg-ywkt-mtosi-claim
+spec:
+  accessModes:
+     - ReadWriteOnce #ReadWriteMany
+  storageClassName: ceph-rbd-gd-1 #ceph-fs-gd-1
+  resources:
+    requests:
+      storage: 1G
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: service-zhwg-ywkt-mtosi
+  labels:
+    app: service-zhwg-ywkt-mtosi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: service-zhwg-ywkt-mtosi
+  template:
+    metadata:
+      labels:
+        app: service-zhwg-ywkt-mtosi
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ''
+    spec: 
+      containers:
+      - name: service-zhwg-ywkt-mtosi
+        image: IMAGENAME:latest
+        imagePullPolicy: Always
+        args:
+        - -XX:+UnlockExperimentalVMOptions
+        - -XX:+UseCGroupMemoryLimitForHeap
+        - -Xmx1024m
+        - -Xms256m
+        - --server.port=9535
+        - --eureka.instance.prefer-ip-address=true
+        - --server.error.include-stacktrace=always
+        - --spring.application.name=service-zhwg-ywkt-mtosi
+        - --spring.cloud.config.discovery.enabled=true
+        - --spring.cloud.config.discovery.service-id=config-server
+        - --eureka.instance.statusPageUrl=http://admin:1@${eureka.instance.instance-id}/swagger-ui.html
+        - --eureka.client.serviceUrl.defaultZone=http://admin:1@172.168.27.251:26065/eureka/
+        - --eureka.instance.nonSecurePort=26073
+        - --eureka.instance.ip-address=172.168.27.251
+        - --eureka.instance.instance-id=${spring.cloud.client.ip-address}:${eureka.instance.nonSecurePort}
+
+
+        ports:
+        - containerPort: 9535
+        env:
+        - name: TZ
+          value: "Asia/Shanghai"
+        resources:
+          requests:
+            memory: 256Mi
+          limits:
+            memory: 2048Mi
+        volumeMounts:
+        - mountPath: /home/znwg/service-zhwg-ywkt-mtosi/logs
+          name: service-zhwg-ywkt-mtosi-data
+      volumes:
+      - name: service-zhwg-ywkt-mtosi-data
+        persistentVolumeClaim:
+          claimName: service-zhwg-ywkt-mtosi-claim
+---          
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: service-zhwg-ywkt-mtosi-svc
+  name: service-zhwg-ywkt-mtosi-svc
+spec:
+  selector:
+    app: service-zhwg-ywkt-mtosi
+  type: NodePort
+  ports:
+  - name: service-zhwg-ywkt-mtosi-port
+    port: 9535
+    protocol: TCP
+    targetPort: 9535
+    nodePort: 26073

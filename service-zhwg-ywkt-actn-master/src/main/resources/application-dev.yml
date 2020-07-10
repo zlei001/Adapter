@@ -1,0 +1,13 @@
+## 开发环境
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:1@172.168.27.251:26065/eureka/
+spring:
+  application:
+    # 开发环境修改该配置，一般加名称后缀
+    name: service-zhwg-ywkt-actn
+logging:
+  level:
+    # 开发环境输出debug日志
+    com.cttnet: DEBUG

@@ -1,0 +1,70 @@
+#!/usr/bin/env groovy
+
+def projectProperties = [
+	[$class: 'BuildDiscarderProperty', strategy: [$class: 'LogRotator', numToKeepStr: '10']],
+	parameters([
+		string(name: 'GIT_URL', defaultValue: 'https://172.19.2.28:17073/NewTransportPortal/service-zhwg-topo.git', description: '【必改】应用模块的GIT地址'), 
+		string(name: 'REGISTRY_IMAGE_NAME', defaultValue: 'service-zhwg-topo', description: '【必改】应用模块名称'), 
+		string(name: 'DOCKER_USER', defaultValue: 'admin', description: 'harbor仓库用户名'), 
+		string(name: 'DOCKER_PASSWORD', defaultValue: 'Catt@0154', description: 'harbor仓库密码'), 
+		string(name: 'REGISTRY_URL', defaultValue: '10.15.2.154:80', description: 'docker仓库地址'),  
+		string(name: 'REGISTRY_IMAGE_NAMESPACE', defaultValue: 'project1', description: ''), 
+		string(name: 'K8S_NAMESPACE', defaultValue: 'default', description: 'k8s名称空间')
+	])
+]
+
+properties(projectProperties)
+
+node{
+
+	def gitCommit
+	def shortGitCommit
+
+	try{
+		stage('源码管理') {
+			def commitVal = checkout([$class: "GitSCM", branches: [[name: "master"]],doGenerateSubmoduleConfigurations: false, extensions: [[$class: "CheckoutOption", timeout: 60], [$class: "CloneOption", depth: 1, noTags: false, reference: "", shallow: true, timeout: 60]], submoduleCfg: [], userRemoteConfigs: [[credentialsId: "dengjianfei", url: "${params.GIT_URL}"]]])
+			gitCommit = "${commitVal.GIT_COMMIT}"
+			shortGitCommit = "${gitCommit[0..10]}"
+		}
+	}catch(exc){
+	
+	}
+	
+	try {
+		stage('maven编译打包') {
+			sh 'mvn clean install -e -U -Dmaven.test.skip=true -f pom.xml -s devops/zhwg-yd/settings.xml'
+			archiveArtifacts allowEmptyArchive: true, artifacts: '**/target/*.jar', onlyIfSuccessful: true
+			archiveArtifacts allowEmptyArchive: true, artifacts: '**/target/*.war', onlyIfSuccessful: true
+		}
+	}catch(exc) {
+		
+	}
+	
+	try {
+		stage('制作docker镜像') {
+			sh "docker build -f devops/zhwg-yd/Dockerfile -t ${params.REGISTRY_URL}/${params.REGISTRY_IMAGE_NAMESPACE}/${params.REGISTRY_IMAGE_NAME}:${shortGitCommit} ."
+		}
+	}catch(exc) {
+		
+	}
+
+	try {
+		stage('推送docker镜像') {
+			sh "docker tag ${params.REGISTRY_URL}/${params.REGISTRY_IMAGE_NAMESPACE}/${params.REGISTRY_IMAGE_NAME}:${shortGitCommit} ${params.REGISTRY_URL}/${params.REGISTRY_IMAGE_NAMESPACE}/${params.REGISTRY_IMAGE_NAME}:${shortGitCommit}"
+			sh "docker push ${params.REGISTRY_URL}/${params.REGISTRY_IMAGE_NAMESPACE}/${params.REGISTRY_IMAGE_NAME}:${shortGitCommit}"
+		}
+	}catch(exc) {
+		
+	}
+	
+	try {
+		stage('k8s部署') {
+			sh "cp devops/zhwg-yd/k8s.yaml  devops/zhwg-yd/k8s-${shortGitCommit}.yaml "
+			sh "sed -i \"s/image: IMAGENAME:latest/image: ${params.REGISTRY_URL}\\/${params.REGISTRY_IMAGE_NAMESPACE}\\/${params.REGISTRY_IMAGE_NAME}:${shortGitCommit}/g\" devops/zhwg-yd/k8s-${shortGitCommit}.yaml "
+			sh "kubectl apply -f devops/zhwg-yd/k8s-${shortGitCommit}.yaml  --record -n ${params.K8S_NAMESPACE}"
+		}
+	}catch(exc) {
+		
+	}
+}
+

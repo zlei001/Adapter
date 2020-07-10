@@ -1,0 +1,53 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.tmforum.org/mtop/fmw/xsd/hdr/v1" xmlns:v11="http://www.tmforum.org/mtop/rtm/xsd/mc/v1" xmlns:v12="http://www.tmforum.org/mtop/nra/xsd/ethoam/v1" xmlns:v13="http://www.tmforum.org/mtop/fmw/xsd/nam/v1">
+    <soapenv:Header>
+        <v1:header>
+            <v1:security>admin:admin</v1:security>
+            <v1:communicationStyle>RPC</v1:communicationStyle>
+            <v1:communicationPattern>SimpleResponse</v1:communicationPattern>
+        </v1:header>
+    </soapenv:Header>
+    <soapenv:Body>
+        <v11:enablePRBSTestRequest>
+            <!--Optional:-->
+            <v11:testParaList>
+                <!--Zero or more repetitions:-->
+                <v12:testPara>
+                    <!--Optional:-->
+                    <v12:tpName type="nvs">
+                        <!--Zero or more repetitions:-->
+                        <v13:rdn>
+                            <v13:type>MD</v13:type>
+                            <v13:value>1</v13:value>
+                        </v13:rdn>
+                        <v13:rdn>
+                            <v13:type>ME</v13:type>
+                            <v13:value>b25ef343-2f57-4d49-8ff1-a4c3ce7c0a4e</v13:value>
+                        </v13:rdn>
+                        <v13:rdn>
+                            <v13:type>PTP</v13:type>
+                            <v13:value>/rack=1/shelf=1/slot=0X02/port=6</v13:value>
+                        </v13:rdn>
+                        <v13:rdn>
+                            <v13:type>CTP</v13:type>
+                            <v13:value>/odu2=1</v13:value>
+                        </v13:rdn>
+                    </v12:tpName>
+                    <!--Optional:-->
+                    <v12:direction>Inward</v12:direction>
+                    <!--Optional:-->
+                    <v12:testDuration>600</v12:testDuration>
+                    <!--Optional:-->
+                    <v12:sampleGranularity>60</v12:sampleGranularity>
+                    <!--Optional:-->
+                    <v12:prbsType>PRBS31</v12:prbsType>
+                    <!--Optional:-->
+                    <v12:accumulatingIndicator>false</v12:accumulatingIndicator>
+                    <!--Optional:-->
+                    <v12:vendorExtensions type="vEx">
+                        <!--You may enter ANY elements at this point-->
+                    </v12:vendorExtensions>
+                </v12:testPara>
+            </v11:testParaList>
+        </v11:enablePRBSTestRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

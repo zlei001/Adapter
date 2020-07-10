@@ -1,0 +1,31 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.tmforum.org/mtop/fmw/xsd/hdr/v1" xmlns:v11="http://www.tmforum.org/mtop/rtm/xsd/mr/v1">
+    <soapenv:Header>
+        <v1:header>
+            <v1:security>admin:admin</v1:security>
+            <v1:communicationPattern>SimpleResponse</v1:communicationPattern>
+            <v1:communicationStyle>RPC</v1:communicationStyle>
+        </v1:header>
+    </soapenv:Header>
+    <soapenv:Body>
+        <v11:getPRBSTestResultRequest>
+            <v11:tpName>
+                <v12:rdn xmlns:v12="http://www.tmforum.org/mtop/fmw/xsd/nam/v1">
+                    <v12:type>MD</v12:type>
+                    <v12:value>1</v12:value>
+                </v12:rdn>
+                <v12:rdn xmlns:v12="http://www.tmforum.org/mtop/fmw/xsd/nam/v1">
+                    <v12:type>ME</v12:type>
+                    <v12:value>6b41aa02-e1df-42e9-aa7d-4cf871f80533</v12:value>
+                </v12:rdn>
+                <v12:rdn xmlns:v12="http://www.tmforum.org/mtop/fmw/xsd/nam/v1">
+                    <v12:type>PTP</v12:type>
+                    <v12:value>/rack=1/shelf=1/slot=32/port=1</v12:value>
+                </v12:rdn>
+                <v12:rdn xmlns:v12="http://www.tmforum.org/mtop/fmw/xsd/nam/v1">
+                    <v12:type>CTP</v12:type>
+                    <v12:value>/odu2=1</v12:value>
+                </v12:rdn>
+            </v11:tpName>
+        </v11:getPRBSTestResultRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

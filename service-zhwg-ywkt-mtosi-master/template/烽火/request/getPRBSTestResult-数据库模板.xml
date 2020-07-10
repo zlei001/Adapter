@@ -1,0 +1,89 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.tmforum.org/mtop/fmw/xsd/hdr/v1" xmlns:v11="http://www.tmforum.org/mtop/rtm/xsd/mr/v1" xmlns:v12="http://www.tmforum.org/mtop/nra/xsd/ethoam/v1">
+    <soapenv:Header>
+        <v1:header>
+            <!--Optional:-->
+            <v1:activityName>?</v1:activityName>
+            <!--Optional:-->
+            <v1:msgName>?</v1:msgName>
+            <!--Optional:-->
+            <v1:msgType>?</v1:msgType>
+            <!--Optional:-->
+            <v1:senderURI>?</v1:senderURI>
+            <!--Optional:-->
+            <v1:destinationURI>?</v1:destinationURI>
+            <!--Optional:-->
+            <v1:replyToURI>?</v1:replyToURI>
+            <!--Optional:-->
+            <v1:originatorURI>?</v1:originatorURI>
+            <!--Optional:-->
+            <v1:failureReplytoURI>?</v1:failureReplytoURI>
+            <!--Optional:-->
+            <v1:activityStatus qualifier="?">?</v1:activityStatus>
+            <!--Optional:-->
+            <v1:correlationId>?</v1:correlationId>
+            <!--Optional:-->
+            <v1:security>?</v1:security>
+            <!--Optional:-->
+            <v1:securityType>?</v1:securityType>
+            <!--Optional:-->
+            <v1:priority>?</v1:priority>
+            <!--Optional:-->
+            <v1:msgSpecificProperties>
+                <!--Zero or more repetitions:-->
+                <v1:property>
+                    <v1:propName>?</v1:propName>
+                    <v1:propValue>?</v1:propValue>
+                </v1:property>
+            </v1:msgSpecificProperties>
+            <!--Optional:-->
+            <v1:communicationPattern>?</v1:communicationPattern>
+            <!--Optional:-->
+            <v1:communicationStyle>?</v1:communicationStyle>
+            <!--Optional:-->
+            <v1:requestedBatchSize>?</v1:requestedBatchSize>
+            <!--Optional:-->
+            <v1:batchSequenceNumber>?</v1:batchSequenceNumber>
+            <!--Optional:-->
+            <v1:batchSequenceEndOfReply>?</v1:batchSequenceEndOfReply>
+            <!--Optional:-->
+            <v1:iteratorReferenceURI>?</v1:iteratorReferenceURI>
+            <!--Optional:-->
+            <v1:fileLocationURI>?</v1:fileLocationURI>
+            <!--Optional:-->
+            <v1:compressionType extension="?">?</v1:compressionType>
+            <!--Optional:-->
+            <v1:packingType extension="?">?</v1:packingType>
+            <!--Optional:-->
+            <v1:timestamp>?</v1:timestamp>
+            <!--Optional:-->
+            <v1:vendorExtensions>
+                <!--You may enter ANY elements at this point-->
+            </v1:vendorExtensions>
+        </v1:header>
+    </soapenv:Header>
+    <soapenv:Body>
+        <v11:getPRBSTestResultResponse>
+            <v11:resultList type="m_table">
+                <!--Zero or more repetitions:-->
+                <v12:testResult>
+                    <!--Optional:-->
+                    <v12:startTime>?</v12:startTime>
+                    <!--Optional:-->
+                    <v12:sampleResultList type="kv6">
+                        <!--Zero or more repetitions:-->
+                        <v12:sampleResult>
+                            <!--Optional:-->
+                            <v12:sampleTime>?</v12:sampleTime>
+                            <!--Optional:-->
+                            <v12:value>?</v12:value>
+                        </v12:sampleResult>
+                    </v12:sampleResultList>
+                    <!--Optional:-->
+                    <v12:totalBitError>?</v12:totalBitError>
+                    <!--Optional:-->
+                    <v12:realDuration>?</v12:realDuration>
+                </v12:testResult>
+            </v11:resultList>
+        </v11:getPRBSTestResultResponse>
+    </soapenv:Body>
+</soapenv:Envelope>

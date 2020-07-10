@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.tmforum.org/mtop/fmw/xsd/hdr/v1" xmlns:v11="http://www.tmforum.org/mtop/rtm/xsd/mc/v1" xmlns:v12="http://www.tmforum.org/mtop/nra/xsd/cmo/v1" xmlns:v13="http://www.tmforum.org/mtop/fmw/xsd/nam/v1">
+   <soapenv:Header>
+      <v1:header>
+      <v1:security>admin:admin</v1:security>
+<v1:communicationStyle>RPC</v1:communicationStyle>
+<v1:communicationPattern>SimpleResponse</v1:communicationPattern>
+      </v1:header>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v11:performMaintenanceOperationRequest>
+         <!--Optional:-->
+         <v11:maintenanceOperation>
+            <!--Optional:-->
+            <v12:tpName>
+               <!--Zero or more repetitions:-->
+               <v13:rdn>
+                  <v13:type>MD</v13:type>
+                  <v13:value>1</v13:value>
+               </v13:rdn>
+                    <v13:rdn>
+                  <v13:type>ME</v13:type>
+                  <v13:value>456cd4ee-3f34-4eca-92c8-e6ee5025be5b</v13:value>
+               </v13:rdn>
+                      <v13:rdn>
+                  <v13:type>EH</v13:type>
+                  <v13:value>/rack=1/shelf=4/slot=0X3A</v13:value>
+               </v13:rdn>
+                <v13:rdn>
+                  <v13:type>EQ</v13:type>
+                  <v13:value>1</v13:value>
+               </v13:rdn>
+              
+          
+            </v12:tpName>
+            <!--Optional:-->
+            <v12:maintenanceOperation>WarmReset</v12:maintenanceOperation>
+            <!--Optional:-->
+      
+            <!--Optional:-->
+            <v12:vendorExtensions>
+               <!--You may enter ANY elements at this point-->
+            </v12:vendorExtensions>
+         </v11:maintenanceOperation>
+         <!--Optional:-->
+         <v11:maintenanceOperationMode>MOM_OPERATE</v11:maintenanceOperationMode>
+      </v11:performMaintenanceOperationRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,8 @@
+##项目自定义配置
+ywkt:
+  mtosi:
+    switch:
+      ##中兴是否支持双向交叉
+      support-zte-bi: true
+      ##烽火是否支持创建并激活交叉连接
+      suppport-fh-ccs: true

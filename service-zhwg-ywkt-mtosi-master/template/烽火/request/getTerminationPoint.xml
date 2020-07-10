@@ -1,0 +1,31 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.tmforum.org/mtop/fmw/xsd/hdr/v1" xmlns:v11="http://www.tmforum.org/mtop/mri/xsd/tpr/v1" xmlns:v12="http://www.tmforum.org/mtop/fmw/xsd/nam/v1">
+    <soapenv:Header>
+        <v1:header>
+            <!--Optional:-->
+            <v1:security>admin:admin</v1:security>
+            <v1:communicationPattern>SimpleResponse</v1:communicationPattern>
+            <v1:communicationStyle>RPC</v1:communicationStyle>
+        </v1:header>
+    </soapenv:Header>
+    <soapenv:Body>
+        <v11:getTerminationPointRequest>
+            <!--Optional:-->
+            <v11:tpRef>
+                <!--Zero or more repetitions:-->
+                <v12:rdn>
+                    <v12:type>MD</v12:type>
+                    <v12:value>1</v12:value>
+                </v12:rdn>
+                <v12:rdn>
+                    <v12:type>ME</v12:type>
+                    <v12:value>b25ef343-2f57-4d49-8ff1-a4c3ce7c0a4e</v12:value>
+                </v12:rdn>
+                <v12:rdn>
+                    <v12:type>PTP</v12:type>
+                    <v12:value>/rack=1/shelf=1/slot=0X02/port=6</v12:value>
+                </v12:rdn>
+
+            </v11:tpRef>
+        </v11:getTerminationPointRequest>
+    </soapenv:Body>
+</soapenv:Envelope>
