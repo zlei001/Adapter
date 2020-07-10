@@ -1,0 +1,16 @@
+logging:
+  level:
+    com.kt.dc: DEBUG
+  file:
+    # 设置日志文件大小
+    max-size: 10MB
+
+dc:
+  manufactorMap:
+    otn_h: dcOtnService
+    otn_z: dcOtnZService
+  otn:
+    https:
+      url: https://10.***.***.***
+
+ceshi: sss

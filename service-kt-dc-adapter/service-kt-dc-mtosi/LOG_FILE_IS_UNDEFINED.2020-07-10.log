@@ -1,0 +1,20 @@
+18:54:51.280 INFO  com.kt.dc.otn.test.ConfigTest [55] - Starting ConfigTest on WIN-GLI7I9HCIR2 with PID 16148 (started by Administrator in F:\job\DC\service-kt-dc-adapter\service-kt-dc-mtosi)
+18:54:51.282 DEBUG com.kt.dc.otn.test.ConfigTest [56] - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+18:54:51.282 INFO  com.kt.dc.otn.test.ConfigTest [655] - The following profiles are active: dev
+18:54:52.756 INFO  o.s.s.c.ThreadPoolTaskExecutor [171] - Initializing ExecutorService 'applicationTaskExecutor'
+18:54:53.020 INFO  com.kt.dc.otn.test.ConfigTest [61] - Started ConfigTest in 2.385 seconds (JVM running for 3.416)
+18:54:54.433 INFO  o.a.http.impl.execchain.RetryExec [97] - I/O exception (org.apache.http.conn.UnsupportedSchemeException) caught when processing request to {}->http://localhost:8762: http protocol is not supported
+18:54:54.434 INFO  o.a.http.impl.execchain.RetryExec [113] - Retrying request to {}->http://localhost:8762
+18:54:54.435 INFO  o.a.http.impl.execchain.RetryExec [97] - I/O exception (org.apache.http.conn.UnsupportedSchemeException) caught when processing request to {}->http://localhost:8762: http protocol is not supported
+18:54:54.435 INFO  o.a.http.impl.execchain.RetryExec [113] - Retrying request to {}->http://localhost:8762
+18:54:54.435 INFO  o.a.http.impl.execchain.RetryExec [97] - I/O exception (org.apache.http.conn.UnsupportedSchemeException) caught when processing request to {}->http://localhost:8762: http protocol is not supported
+18:54:54.435 INFO  o.a.http.impl.execchain.RetryExec [113] - Retrying request to {}->http://localhost:8762
+18:54:54.436 ERROR c.kt.dc.otn.util.SendHttpRequestUtil [333] - doPostXml请求异常！http protocol is not supported
+18:54:54.448 INFO  o.s.s.c.ThreadPoolTaskExecutor [208] - Shutting down ExecutorService 'applicationTaskExecutor'
+18:55:56.110 INFO  com.kt.dc.otn.test.ConfigTest [55] - Starting ConfigTest on WIN-GLI7I9HCIR2 with PID 15440 (started by Administrator in F:\job\DC\service-kt-dc-adapter\service-kt-dc-mtosi)
+18:55:56.113 DEBUG com.kt.dc.otn.test.ConfigTest [56] - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+18:55:56.113 INFO  com.kt.dc.otn.test.ConfigTest [655] - The following profiles are active: dev
+18:55:57.726 INFO  o.s.s.c.ThreadPoolTaskExecutor [171] - Initializing ExecutorService 'applicationTaskExecutor'
+18:55:58.094 INFO  com.kt.dc.otn.test.ConfigTest [61] - Started ConfigTest in 2.642 seconds (JVM running for 3.622)
+18:56:03.088 ERROR c.kt.dc.otn.util.SendHttpRequestUtil [333] - doPostXml请求异常！Connect to localhost:8762 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+18:56:03.122 INFO  o.s.s.c.ThreadPoolTaskExecutor [208] - Shutting down ExecutorService 'applicationTaskExecutor'

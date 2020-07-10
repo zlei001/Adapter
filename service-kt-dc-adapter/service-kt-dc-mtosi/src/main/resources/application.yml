@@ -1,0 +1,17 @@
+server:
+  port: 8761 # 端口
+  tomcat:
+    uri-encoding: UTF-8
+  servlet:
+    context-path: /service-dc
+
+
+spring:
+  application:
+    name: service-kt-dc-mtosi
+  profiles:
+    active: dev
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+

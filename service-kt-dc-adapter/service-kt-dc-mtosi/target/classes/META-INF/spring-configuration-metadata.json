@@ -1,0 +1,18 @@
+{
+  "groups": [
+    {
+      "name": "dc",
+      "type": "com.kt.dc.otn.config.BeanMapConfig",
+      "sourceType": "com.kt.dc.otn.config.BeanMapConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "dc.manufactor-map",
+      "type": "java.util.Map<java.lang.String,java.lang.String>",
+      "description": "从配置文件中读取的manufactor开头的数据 注意：名称必须与配置文件中保持一致",
+      "sourceType": "com.kt.dc.otn.config.BeanMapConfig"
+    }
+  ],
+  "hints": []
+}

@@ -1,0 +1,33 @@
+10:52:31.869 INFO  com.kt.dc.otn.DCServerApplication [55] - Starting DCServerApplication on WIN-GLI7I9HCIR2 with PID 4280 (F:\job\DC\service-kt-dc-adapter\service-kt-dc-mtosi\target\classes started by Administrator in F:\job\DC\service-kt-dc-adapter)
+10:52:31.872 DEBUG com.kt.dc.otn.DCServerApplication [56] - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+10:52:31.872 INFO  com.kt.dc.otn.DCServerApplication [655] - The following profiles are active: dev
+10:52:31.911 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [225] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+10:52:31.912 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [225] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+10:52:33.985 INFO  o.s.b.w.e.tomcat.TomcatWebServer [92] - Tomcat initialized with port(s): 8761 (http)
+10:52:34.033 INFO  o.a.coyote.http11.Http11NioProtocol [173] - Initializing ProtocolHandler ["http-nio-8761"]
+10:52:34.036 INFO  o.a.catalina.core.StandardService [173] - Starting service [Tomcat]
+10:52:34.037 INFO  o.a.catalina.core.StandardEngine [173] - Starting Servlet engine: [Apache Tomcat/9.0.30]
+10:52:34.156 INFO  o.a.c.c.C.[.[.[/service-dc] [173] - Initializing Spring embedded WebApplicationContext
+10:52:34.157 INFO  o.s.web.context.ContextLoader [284] - Root WebApplicationContext: initialization completed in 2245 ms
+10:52:34.353 INFO  o.s.s.c.ThreadPoolTaskExecutor [171] - Initializing ExecutorService 'applicationTaskExecutor'
+10:52:34.483 WARN  o.s.b.d.a.OptionalLiveReloadServer [61] - Unable to start LiveReload server
+10:52:34.517 INFO  o.a.coyote.http11.Http11NioProtocol [173] - Starting ProtocolHandler ["http-nio-8761"]
+10:52:34.560 INFO  o.s.b.w.e.tomcat.TomcatWebServer [204] - Tomcat started on port(s): 8761 (http) with context path '/service-dc'
+10:52:34.568 INFO  com.kt.dc.otn.DCServerApplication [61] - Started DCServerApplication in 4.526 seconds (JVM running for 5.526)
+11:53:33.382 INFO  com.kt.dc.otn.DCServerApplication [55] - Starting DCServerApplication on WIN-GLI7I9HCIR2 with PID 9356 (F:\job\DC\service-kt-dc-adapter\service-kt-dc-mtosi\target\classes started by Administrator in F:\job\DC\service-kt-dc-adapter)
+11:53:33.415 DEBUG com.kt.dc.otn.DCServerApplication [56] - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+11:53:33.415 INFO  com.kt.dc.otn.DCServerApplication [655] - The following profiles are active: dev
+11:53:33.468 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [225] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+11:53:33.468 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [225] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+11:53:34.314 INFO  o.s.b.w.e.tomcat.TomcatWebServer [92] - Tomcat initialized with port(s): 8761 (http)
+11:53:34.322 INFO  o.a.coyote.http11.Http11NioProtocol [173] - Initializing ProtocolHandler ["http-nio-8761"]
+11:53:34.323 INFO  o.a.catalina.core.StandardService [173] - Starting service [Tomcat]
+11:53:34.323 INFO  o.a.catalina.core.StandardEngine [173] - Starting Servlet engine: [Apache Tomcat/9.0.30]
+11:53:34.387 INFO  o.a.c.c.C.[.[.[/service-dc] [173] - Initializing Spring embedded WebApplicationContext
+11:53:34.388 INFO  o.s.web.context.ContextLoader [284] - Root WebApplicationContext: initialization completed in 919 ms
+11:53:34.536 INFO  o.s.s.c.ThreadPoolTaskExecutor [171] - Initializing ExecutorService 'applicationTaskExecutor'
+11:53:34.639 WARN  o.s.b.d.a.OptionalLiveReloadServer [61] - Unable to start LiveReload server
+11:53:34.653 INFO  o.a.coyote.http11.Http11NioProtocol [173] - Starting ProtocolHandler ["http-nio-8761"]
+11:53:34.671 INFO  o.s.b.w.e.tomcat.TomcatWebServer [204] - Tomcat started on port(s): 8761 (http) with context path '/service-dc'
+11:53:34.674 INFO  com.kt.dc.otn.DCServerApplication [61] - Started DCServerApplication in 1.825 seconds (JVM running for 2.963)
+11:53:34.676 INFO  com.kt.dc.otn.test.ConfigTest [25] - 开始执行请求
