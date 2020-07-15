@@ -1,0 +1,71 @@
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.tmforum.org/mtop/fmw/xsd/hdr/v1" xmlns:v11="http://www.tmforum.org/mtop/mri/xsd/tpr/v1">  
+    <soapenv:Header> 
+        <v1:header> 
+            <!--Optional:-->  
+            <v1:activityName>?</v1:activityName>  
+            <!--Optional:-->  
+            <v1:msgName>?</v1:msgName>  
+            <!--Optional:-->  
+            <v1:msgType>?</v1:msgType>  
+            <!--Optional:-->  
+            <v1:senderURI>?</v1:senderURI>  
+            <!--Optional:-->  
+            <v1:destinationURI>?</v1:destinationURI>  
+            <!--Optional:-->  
+            <v1:replyToURI>?</v1:replyToURI>  
+            <!--Optional:-->  
+            <v1:originatorURI>?</v1:originatorURI>  
+            <!--Optional:-->  
+            <v1:failureReplytoURI>?</v1:failureReplytoURI>  
+            <!--Optional:-->  
+            <v1:activityStatus qualifier="?">?</v1:activityStatus>  
+            <!--Optional:-->  
+            <v1:correlationId>?</v1:correlationId>  
+            <!--Optional:-->  
+            <v1:security>?</v1:security>  
+            <!--Optional:-->  
+            <v1:securityType>?</v1:securityType>  
+            <!--Optional:-->  
+            <v1:priority>?</v1:priority>  
+            <!--Optional:-->  
+            <v1:msgSpecificProperties type="nvs"> 
+                <!--Zero or more repetitions:-->  
+                <v1:property type="skList"> 
+                    <v1:propName>?</v1:propName>  
+                    <v1:propValue>?</v1:propValue> 
+                </v1:property> 
+            </v1:msgSpecificProperties>  
+            <!--Optional:-->  
+            <v1:communicationPattern>?</v1:communicationPattern>  
+            <!--Optional:-->  
+            <v1:communicationStyle>?</v1:communicationStyle>  
+            <!--Optional:-->  
+            <v1:requestedBatchSize>?</v1:requestedBatchSize>  
+            <!--Optional:-->  
+            <v1:batchSequenceNumber>?</v1:batchSequenceNumber>  
+            <!--Optional:-->  
+            <v1:batchSequenceEndOfReply>?</v1:batchSequenceEndOfReply>  
+            <!--Optional:-->  
+            <v1:iteratorReferenceURI>?</v1:iteratorReferenceURI>  
+            <!--Optional:-->  
+            <v1:fileLocationURI>?</v1:fileLocationURI>  
+            <!--Optional:-->  
+            <v1:compressionType extension="?">?</v1:compressionType>  
+            <!--Optional:-->  
+            <v1:packingType extension="?">?</v1:packingType>  
+            <!--Optional:-->  
+            <v1:timestamp>?</v1:timestamp>  
+            <!--Optional:-->  
+            <v1:vendorExtensions type="vEx"> 
+                <!--You may enter ANY elements at this point--> 
+            </v1:vendorExtensions> 
+        </v1:header> 
+    </soapenv:Header>  
+    <soapenv:Body type="m_table"> 
+        <v11:getAvailableTimeSlotResponse table="t_mt_timeslot"> 
+            <!--Optional:-->  
+            <v11:timeSlot>?</v11:timeSlot> 
+        </v11:getAvailableTimeSlotResponse> 
+    </soapenv:Body> 
+</soapenv:Envelope>

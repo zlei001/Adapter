@@ -1,0 +1,177 @@
+[2020-07-14 15:40:41 962] [INFO ] [Config:134] - 
+*********** WSDL Parser Config ************
+ID:	wsdl_util
+CHARSET:	UTF-8
+APP_ROOT_DIR:	C:\Users\Administrator\Desktop\ws-util
+appCfgPath:	C:\Users\Administrator\Desktop\ws-util\conf\wsdl_util_cfg.dat
+confPath:	C:\Users\Administrator\Desktop\ws-util\conf\wsdl_util_conf.xml
+isConfigTemplate:	true
+parseInPath:	e:\Users\latico\Desktop\201700810DDPs_烽火新I2接口\201700810DDPs\DDPs
+parseOutDir:	e:\Users\latico\Desktop/test/ws_templates
+skipElementNameRegex:	(?i)(header|body|get.+?request)
+parseTemplateInPath:	./file
+parseTemplateOutDir:	./ws_templates/parsed
+isGetRequestTemplate:	true
+isGetResponseTemplate:	true
+wsdlFileNameRegex:	.+?((?i)(http|jms)\.wsdl)
+wsdlUris:	[]
+templateConfInfos:	{getAllEquipment=
+[templateName:getAllEquipment]; [skipElementNameRegex:(?i)(header|body|get.+?request)]; [aliass:{}]; [tableElements:{eq=t_mt_equipmentholder}]; [addAttributes:{}]; [addElements:{}]; 
+, getAvailableTimeSlot=
+[templateName:getAvailableTimeSlot]; [skipElementNameRegex:(?i)(header|body|get.+?request)]; [aliass:{}]; [tableElements:{getAvailableTimeSlotResponse=t_mt_timeslot}]; [addAttributes:{}]; [addElements:{}]; 
+, getAllSubnetworkConnections=
+[templateName:getAllSubnetworkConnections]; [skipElementNameRegex:(?i)(header|body|get.+?request)]; [aliass:{}]; [tableElements:{snc=t_mt_subnetworkconnection, tpData=t_mt_snc_tp}]; [addAttributes:{zEndTpDataList={extends=name,m_seq}, aEndTpDataList={extends=name,m_seq}}]; [addElements:{zEndTpDataList.tpData=
+name=s_seq; value=; attributeMap={alias=_tp_end_type, type=catt}
+, snc=
+name=m_seq; value=; attributeMap={alias=route_seq, type=catt}
+, aEndTpDataList.tpData=
+name=s_seq; value=; attributeMap={alias=tp_seq, type=catt}
+}]; 
+, getAllPhysicalTerminationPoints=
+[templateName:getAllPhysicalTerminationPoints]; [skipElementNameRegex:(?i)(header|body|get.+?request)]; [aliass:{}]; [tableElements:{ftp=t_mt_tp, ptp=t_mt_tp, ctp=t_mt_ctp}]; [addAttributes:{}]; [addElements:{}]; 
+, getAllManagementDomains=
+[templateName:getAllManagementDomains]; [skipElementNameRegex:(?i)(header|body|get.+?request)]; [aliass:{}]; [tableElements:{md=t_mt_ems}]; [addAttributes:{}]; [addElements:{}]; 
+, getAllCrossConnections=
+[templateName:getAllCrossConnections]; [skipElementNameRegex:(?i)(header|body|get.+?request)]; [aliass:{aEndRefList=aEndName, zEndRefList=zEndName}]; [tableElements:{cc=t_mt_crossconnection}]; [addAttributes:{}]; [addElements:{zEndTpDataList.tpData=
+name=s_seq; value=; attributeMap={alias=_tp_end_type, type=catt}
+, snc=
+name=m_seq; value=; attributeMap={alias=route_seq, type=catt}
+, aEndTpDataList.tpData=
+name=s_seq; value=; attributeMap={alias=tp_seq, type=catt}
+}]; 
+, example=
+[templateName:example]; [skipElementNameRegex:(?i)(header|body|get.+?request)]; [aliass:{=}]; [tableElements:{=}]; [addAttributes:{={}}]; [addElements:{=
+name=; value=; attributeMap={}
+}]; 
+}
+*************************************************
+
+[2020-07-14 15:40:41 966] [INFO ] [Config:101] - 
+   内存信息 :245M/245M/910M(free/total/max)
+**************************************************
+*                                                *
+*  模块名称   ：WSDL解析与XML模板配置工具        *
+*                                                *
+*  版本号     ：V1.0.0.0                         *
+*                                                *
+*  定版时间   ：2016-12-13 18:00:00              *
+*                                                *
+*  最后修改人 ：蓝鼎栋                           *
+*                                                *
+*  程序说明 ：解析WSDL和配置XML模板              *
+*                                                *
+**************************************************
+
+[2020-07-14 15:40:41 968] [INFO ] [WsdlTemplateBusiness:219] - 开始解析WSDL...
+[2020-07-14 15:40:41 968] [WARN ] [WsdlTemplateBusiness:212] - e:\Users\latico\Desktop\201700810DDPs_烽火新I2接口\201700810DDPs\DDPs 不是URI
+[2020-07-14 15:40:41 979] [INFO ] [Main:30] - 程序将在5秒后完成退出
+[2020-07-14 15:41:17 078] [INFO ] [Config:134] - 
+*********** WSDL Parser Config ************
+ID:	wsdl_util
+CHARSET:	UTF-8
+APP_ROOT_DIR:	C:\Users\Administrator\Desktop\ws-util
+appCfgPath:	C:\Users\Administrator\Desktop\ws-util\conf\wsdl_util_cfg.dat
+confPath:	C:\Users\Administrator\Desktop\ws-util\conf\wsdl_util_conf.xml
+isConfigTemplate:	true
+parseInPath:	e:\Users\latico\Desktop\201700810DDPs_烽火新I2接口\201700810DDPs\DDPs
+parseOutDir:	e:\Users\latico\Desktop/test/ws_templates
+skipElementNameRegex:	(?i)(header|body|get.+?request)
+parseTemplateInPath:	./file
+parseTemplateOutDir:	./ws_templates/parsed
+isGetRequestTemplate:	true
+isGetResponseTemplate:	true
+wsdlFileNameRegex:	.+?((?i)(http|jms)\.wsdl)
+wsdlUris:	[]
+templateConfInfos:	{getAllEquipment=
+[templateName:getAllEquipment]; [skipElementNameRegex:(?i)(header|body|get.+?request)]; [aliass:{}]; [tableElements:{eq=t_mt_equipmentholder}]; [addAttributes:{}]; [addElements:{}]; 
+, getAvailableTimeSlot=
+[templateName:getAvailableTimeSlot]; [skipElementNameRegex:(?i)(header|body|get.+?request)]; [aliass:{}]; [tableElements:{getAvailableTimeSlotResponse=t_mt_timeslot}]; [addAttributes:{}]; [addElements:{}]; 
+, getAllSubnetworkConnections=
+[templateName:getAllSubnetworkConnections]; [skipElementNameRegex:(?i)(header|body|get.+?request)]; [aliass:{}]; [tableElements:{snc=t_mt_subnetworkconnection, tpData=t_mt_snc_tp}]; [addAttributes:{zEndTpDataList={extends=name,m_seq}, aEndTpDataList={extends=name,m_seq}}]; [addElements:{zEndTpDataList.tpData=
+name=s_seq; value=; attributeMap={alias=_tp_end_type, type=catt}
+, snc=
+name=m_seq; value=; attributeMap={alias=route_seq, type=catt}
+, aEndTpDataList.tpData=
+name=s_seq; value=; attributeMap={alias=tp_seq, type=catt}
+}]; 
+, getAllPhysicalTerminationPoints=
+[templateName:getAllPhysicalTerminationPoints]; [skipElementNameRegex:(?i)(header|body|get.+?request)]; [aliass:{}]; [tableElements:{ftp=t_mt_tp, ptp=t_mt_tp, ctp=t_mt_ctp}]; [addAttributes:{}]; [addElements:{}]; 
+, getAllManagementDomains=
+[templateName:getAllManagementDomains]; [skipElementNameRegex:(?i)(header|body|get.+?request)]; [aliass:{}]; [tableElements:{md=t_mt_ems}]; [addAttributes:{}]; [addElements:{}]; 
+, getAllCrossConnections=
+[templateName:getAllCrossConnections]; [skipElementNameRegex:(?i)(header|body|get.+?request)]; [aliass:{aEndRefList=aEndName, zEndRefList=zEndName}]; [tableElements:{cc=t_mt_crossconnection}]; [addAttributes:{}]; [addElements:{zEndTpDataList.tpData=
+name=s_seq; value=; attributeMap={alias=_tp_end_type, type=catt}
+, snc=
+name=m_seq; value=; attributeMap={alias=route_seq, type=catt}
+, aEndTpDataList.tpData=
+name=s_seq; value=; attributeMap={alias=tp_seq, type=catt}
+}]; 
+, example=
+[templateName:example]; [skipElementNameRegex:(?i)(header|body|get.+?request)]; [aliass:{=}]; [tableElements:{=}]; [addAttributes:{={}}]; [addElements:{=
+name=; value=; attributeMap={}
+}]; 
+}
+*************************************************
+
+[2020-07-14 15:41:17 089] [INFO ] [Config:101] - 
+   内存信息 :245M/245M/910M(free/total/max)
+**************************************************
+*                                                *
+*  模块名称   ：WSDL解析与XML模板配置工具        *
+*                                                *
+*  版本号     ：V1.0.0.0                         *
+*                                                *
+*  定版时间   ：2016-12-13 18:00:00              *
+*                                                *
+*  最后修改人 ：蓝鼎栋                           *
+*                                                *
+*  程序说明 ：解析WSDL和配置XML模板              *
+*                                                *
+**************************************************
+
+[2020-07-14 15:41:17 099] [INFO ] [DiscernXmlFile:55] - 配置模板功能,开始处理文件：.\file\createTopologicalLink_response.xml
+[2020-07-14 15:41:17 134] [INFO ] [DiscernXmlStructure:95] - 生成配置后的模板文件完成：./ws_templates/parsed/file/createTopologicalLink_response.xml
+[2020-07-14 15:41:17 137] [INFO ] [DiscernXmlFile:55] - 配置模板功能,开始处理文件：.\file\discern\getAllCrossConnections.xml
+[2020-07-14 15:41:17 156] [INFO ] [DiscernXmlStructure:95] - 生成配置后的模板文件完成：./ws_templates/parsed/file/discern/getAllCrossConnections.xml
+[2020-07-14 15:41:17 157] [INFO ] [DiscernXmlFile:55] - 配置模板功能,开始处理文件：.\file\discern\getAllEquipment.xml
+[2020-07-14 15:41:17 184] [INFO ] [DiscernXmlStructure:95] - 生成配置后的模板文件完成：./ws_templates/parsed/file/discern/getAllEquipment.xml
+[2020-07-14 15:41:17 186] [INFO ] [DiscernXmlFile:55] - 配置模板功能,开始处理文件：.\file\discern\getAllManagementDomains.xml
+[2020-07-14 15:41:17 199] [INFO ] [DiscernXmlStructure:95] - 生成配置后的模板文件完成：./ws_templates/parsed/file/discern/getAllManagementDomains.xml
+[2020-07-14 15:41:17 201] [INFO ] [DiscernXmlFile:55] - 配置模板功能,开始处理文件：.\file\discern\getAllPhysicalTerminationPoints.xml
+[2020-07-14 15:41:17 233] [INFO ] [DiscernXmlStructure:95] - 生成配置后的模板文件完成：./ws_templates/parsed/file/discern/getAllPhysicalTerminationPoints.xml
+[2020-07-14 15:41:17 234] [INFO ] [DiscernXmlFile:55] - 配置模板功能,开始处理文件：.\file\discern\getAllProtectionGroups.xml
+[2020-07-14 15:41:17 247] [INFO ] [DiscernXmlStructure:95] - 生成配置后的模板文件完成：./ws_templates/parsed/file/discern/getAllProtectionGroups.xml
+[2020-07-14 15:41:17 248] [INFO ] [DiscernXmlFile:55] - 配置模板功能,开始处理文件：.\file\discern\getAllSubnetworkConnections.xml
+[2020-07-14 15:41:17 261] [INFO ] [DiscernXmlStructure:95] - 生成配置后的模板文件完成：./ws_templates/parsed/file/discern/getAllSubnetworkConnections.xml
+[2020-07-14 15:41:17 263] [INFO ] [DiscernXmlFile:55] - 配置模板功能,开始处理文件：.\file\discern\getAvailableTimeSlot.xml
+[2020-07-14 15:41:17 269] [INFO ] [DiscernXmlStructure:95] - 生成配置后的模板文件完成：./ws_templates/parsed/file/discern/getAvailableTimeSlot.xml
+[2020-07-14 15:41:17 270] [INFO ] [DiscernXmlFile:55] - 配置模板功能,开始处理文件：.\file\discern\getManagementDomain.xml
+[2020-07-14 15:41:17 275] [INFO ] [DiscernXmlStructure:95] - 生成配置后的模板文件完成：./ws_templates/parsed/file/discern/getManagementDomain.xml
+[2020-07-14 15:41:17 275] [INFO ] [DiscernXmlFile:55] - 配置模板功能,开始处理文件：.\file\discern\getSubnetworkConnection.xml
+[2020-07-14 15:41:17 284] [INFO ] [DiscernXmlStructure:95] - 生成配置后的模板文件完成：./ws_templates/parsed/file/discern/getSubnetworkConnection.xml
+[2020-07-14 15:41:17 285] [INFO ] [DiscernXmlFile:55] - 配置模板功能,开始处理文件：.\file\discern\getTerminationPoint.xml
+[2020-07-14 15:41:17 299] [INFO ] [DiscernXmlStructure:95] - 生成配置后的模板文件完成：./ws_templates/parsed/file/discern/getTerminationPoint.xml
+[2020-07-14 15:41:17 301] [INFO ] [DiscernXmlFile:55] - 配置模板功能,开始处理文件：.\file\getAllCrossConnections.xml
+[2020-07-14 15:41:17 309] [INFO ] [DiscernXmlStructure:95] - 生成配置后的模板文件完成：./ws_templates/parsed/file/getAllCrossConnections.xml
+[2020-07-14 15:41:17 310] [INFO ] [DiscernXmlFile:55] - 配置模板功能,开始处理文件：.\file\getAllEquipment.xml
+[2020-07-14 15:41:17 317] [INFO ] [DiscernXmlStructure:95] - 生成配置后的模板文件完成：./ws_templates/parsed/file/getAllEquipment.xml
+[2020-07-14 15:41:17 319] [INFO ] [DiscernXmlFile:55] - 配置模板功能,开始处理文件：.\file\getAllManagementDomains.xml
+[2020-07-14 15:41:17 324] [INFO ] [DiscernXmlStructure:95] - 生成配置后的模板文件完成：./ws_templates/parsed/file/getAllManagementDomains.xml
+[2020-07-14 15:41:17 325] [INFO ] [DiscernXmlFile:55] - 配置模板功能,开始处理文件：.\file\getAllPhysicalTerminationPoints.xml
+[2020-07-14 15:41:17 335] [INFO ] [DiscernXmlStructure:95] - 生成配置后的模板文件完成：./ws_templates/parsed/file/getAllPhysicalTerminationPoints.xml
+[2020-07-14 15:41:17 337] [INFO ] [DiscernXmlFile:55] - 配置模板功能,开始处理文件：.\file\getAllProtectionGroups.xml
+[2020-07-14 15:41:17 345] [INFO ] [DiscernXmlStructure:95] - 生成配置后的模板文件完成：./ws_templates/parsed/file/getAllProtectionGroups.xml
+[2020-07-14 15:41:17 346] [INFO ] [DiscernXmlFile:55] - 配置模板功能,开始处理文件：.\file\getAllSubnetworkConnections.xml
+[2020-07-14 15:41:17 354] [INFO ] [DiscernXmlStructure:95] - 生成配置后的模板文件完成：./ws_templates/parsed/file/getAllSubnetworkConnections.xml
+[2020-07-14 15:41:17 355] [INFO ] [DiscernXmlFile:55] - 配置模板功能,开始处理文件：.\file\getAvailableTimeSlot.xml
+[2020-07-14 15:41:17 359] [INFO ] [DiscernXmlStructure:95] - 生成配置后的模板文件完成：./ws_templates/parsed/file/getAvailableTimeSlot.xml
+[2020-07-14 15:41:17 361] [INFO ] [DiscernXmlFile:55] - 配置模板功能,开始处理文件：.\file\getManagementDomain.xml
+[2020-07-14 15:41:17 366] [INFO ] [DiscernXmlStructure:95] - 生成配置后的模板文件完成：./ws_templates/parsed/file/getManagementDomain.xml
+[2020-07-14 15:41:17 368] [INFO ] [DiscernXmlFile:55] - 配置模板功能,开始处理文件：.\file\getSubnetworkConnection.xml
+[2020-07-14 15:41:17 376] [INFO ] [DiscernXmlStructure:95] - 生成配置后的模板文件完成：./ws_templates/parsed/file/getSubnetworkConnection.xml
+[2020-07-14 15:41:17 377] [INFO ] [DiscernXmlFile:55] - 配置模板功能,开始处理文件：.\file\getTerminationPoint.xml
+[2020-07-14 15:41:17 385] [INFO ] [DiscernXmlStructure:95] - 生成配置后的模板文件完成：./ws_templates/parsed/file/getTerminationPoint.xml
+[2020-07-14 15:41:17 386] [INFO ] [DiscernXmlFile:55] - 配置模板功能,开始处理文件：.\file\NewFile.xml
+[2020-07-14 15:41:17 389] [INFO ] [DiscernXmlStructure:95] - 生成配置后的模板文件完成：./ws_templates/parsed/file/NewFile.xml
+[2020-07-14 15:41:17 389] [INFO ] [DiscernXmlFile:55] - 配置模板功能,开始处理文件：.\file\post-tunnel-req.xml
+[2020-07-14 15:41:17 395] [INFO ] [DiscernXmlStructure:95] - 生成配置后的模板文件完成：./ws_templates/parsed/file/post-tunnel-req.xml

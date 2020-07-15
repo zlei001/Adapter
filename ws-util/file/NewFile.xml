@@ -1,0 +1,21 @@
+<Envelope>
+	<Header>
+		<header>
+			<activityName>?</activityName>
+			<priority>?</priority>
+			
+			<msgSpecificProperties>
+				<property>
+					<propName>?</propName>
+					<propValue>?</propValue>
+				</property>
+			</msgSpecificProperties>
+			
+			<communicationPattern>?</communicationPattern>
+			<vendorExtensions></vendorExtensions>
+		</header>
+	</Header>
+	<Body>
+		 <getAllManagementDomainsResponse></getAllManagementDomainsResponse>
+	</Body>
+</Envelope>

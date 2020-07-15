@@ -1,0 +1,102 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.tmforum.org/mtop/fmw/xsd/hdr/v1" xmlns:v11="http://www.tmforum.org/mtop/mri/xsd/mdr/v1" xmlns:v12="http://www.tmforum.org/mtop/fmw/xsd/md/v1" xmlns:v13="http://www.tmforum.org/mtop/fmw/xsd/coi/v1" xmlns:v14="http://www.tmforum.org/mtop/fmw/xsd/nam/v1" xmlns:v15="http://www.tmforum.org/mtop/fmw/xsd/gen/v1">
+   <soapenv:Header>
+      <v1:header>
+         <!--Optional:-->
+         <v1:activityName>?</v1:activityName>
+         <!--Optional:-->
+         <v1:msgName>?</v1:msgName>
+         <!--Optional:-->
+         <v1:msgType>?</v1:msgType>
+         <!--Optional:-->
+         <v1:senderURI>?</v1:senderURI>
+         <!--Optional:-->
+         <v1:destinationURI>?</v1:destinationURI>
+         <!--Optional:-->
+         <v1:replyToURI>?</v1:replyToURI>
+         <!--Optional:-->
+         <v1:originatorURI>?</v1:originatorURI>
+         <!--Optional:-->
+         <v1:failureReplytoURI>?</v1:failureReplytoURI>
+         <!--Optional:-->
+         <v1:activityStatus qualifier="?">?</v1:activityStatus>
+         <!--Optional:-->
+         <v1:correlationId>?</v1:correlationId>
+         <!--Optional:-->
+         <v1:security>?</v1:security>
+         <!--Optional:-->
+         <v1:securityType>?</v1:securityType>
+         <!--Optional:-->
+         <v1:priority>?</v1:priority>
+         <!--Optional:-->
+         <v1:msgSpecificProperties type="nvs">
+            <!--Zero or more repetitions:-->
+            <v1:property type="skList">
+               <v1:propName>?</v1:propName>
+               <v1:propValue>?</v1:propValue>
+            </v1:property>
+         </v1:msgSpecificProperties>
+         <!--Optional:-->
+         <v1:communicationPattern>?</v1:communicationPattern>
+         <!--Optional:-->
+         <v1:communicationStyle>?</v1:communicationStyle>
+         <!--Optional:-->
+         <v1:requestedBatchSize>?</v1:requestedBatchSize>
+         <!--Optional:-->
+         <v1:batchSequenceNumber>?</v1:batchSequenceNumber>
+         <!--Optional:-->
+         <v1:batchSequenceEndOfReply>?</v1:batchSequenceEndOfReply>
+         <!--Optional:-->
+         <v1:iteratorReferenceURI>?</v1:iteratorReferenceURI>
+         <!--Optional:-->
+         <v1:fileLocationURI>?</v1:fileLocationURI>
+         <!--Optional:-->
+         <v1:compressionType extension="?">?</v1:compressionType>
+         <!--Optional:-->
+         <v1:packingType extension="?">?</v1:packingType>
+         <!--Optional:-->
+         <v1:timestamp>?</v1:timestamp>
+         <!--Optional:-->
+         <v1:vendorExtensions type="vEx">
+            <!--You may enter ANY elements at this point-->
+         </v1:vendorExtensions>
+      </v1:header>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v11:getAllManagementDomainsResponse>
+         <!--Optional:-->
+         <v11:mdList type="m_table">
+            <!--Zero or more repetitions:-->
+            <v12:md table="T_MT_EMS">
+               <!--Optional:-->
+               <v13:name type="nvs">
+                  <!--1 or more repetitions:-->
+                  <v14:rdn type="skList">
+                     <v14:type>?</v14:type>
+                     <v14:value>?</v14:value>
+                  </v14:rdn>
+               </v13:name>
+               <!--Optional:-->
+               <v13:userLabel>?</v13:userLabel>
+               <!--Optional:-->
+               <v13:discoveredName>?</v13:discoveredName>
+               <!--Optional:-->
+               <v13:namingOs>?</v13:namingOs>
+               <!--Optional:-->
+               <v13:owner>?</v13:owner>
+               <!--Optional:-->
+               <v13:aliasNameList type="nvs">
+                  <!--Zero or more repetitions:-->
+                  <v15:alias type="skList">
+                     <v15:aliasName>?</v15:aliasName>
+                     <v15:aliasValue>?</v15:aliasValue>
+                  </v15:alias>
+               </v13:aliasNameList>
+               <!--Optional:-->
+               <v13:vendorExtensions type="vEx">
+                  <!--You may enter ANY elements at this point-->
+               </v13:vendorExtensions>
+            </v12:md>
+         </v11:mdList>
+      </v11:getAllManagementDomainsResponse>
+   </soapenv:Body>
+</soapenv:Envelope>

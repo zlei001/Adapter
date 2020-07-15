@@ -1,0 +1,20 @@
+
+<Envelope> 
+    <Header> 
+        <header> 
+            <activityName>?</activityName>  
+            <priority>?</priority>  
+            <msgSpecificProperties type="nvs"> 
+                <property type="skList"> 
+                    <propName>?</propName>  
+                    <propValue>?</propValue> 
+                </property> 
+            </msgSpecificProperties>  
+            <communicationPattern>?</communicationPattern>  
+            <vendorExtensions type="vEx"/> 
+        </header> 
+    </Header>  
+    <Body> 
+        <getAllManagementDomainsResponse/> 
+    </Body> 
+</Envelope>

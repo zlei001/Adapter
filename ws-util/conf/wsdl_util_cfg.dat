@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config hint="应用-开发配置文件"> 
+  <bases> 
+    
+     <base id="templateConf" caption="模板配置" hint="下面的元素名称是WS接口名称,qualifiedName跟java的包名格式一样,为了方便可以只配置后面一部分">
+    	<example caption="标签名是接口名称" hint="该节点是配置模板">
+	    	<skipElementNameRegex><![CDATA[(?i)(header|body|get.+?request)]]></skipElementNameRegex>
+	    	
+	    	<aliass caption="别名">
+		    	<alise qualifiedName="" ailas=""/>
+	    	</aliass>
+	    	
+	    	<addAttributes caption="增加属性" hint="比如：format='tz_time'、extends=''、type='skip'">
+	    		<addAttribute qualifiedName="" attributeMap=""/>
+	    	</addAttributes>
+	    	
+	    	<addElements caption="增加字段">
+	    		<addElement qualifiedName="" name="" value="" attributeMap=""/>
+	    	</addElements>
+	    	<tableElements caption="表节点">
+	    		<tableElement qualifiedName="" tableName=""/>
+	    	</tableElements>
+    	</example>
+    	<getAllManagementDomains caption="标签名是接口名称" hint="该节点是配置模板">
+	    	<skipElementNameRegex><![CDATA[(?i)(header|body|get.+?request)]]></skipElementNameRegex>
+	    	
+	    	<aliass caption="别名">
+	    	</aliass>
+	    	
+	    	<addAttributes caption="增加属性" hint="比如：format='tz_time'、extends=''、type='skip'">
+	    	</addAttributes>
+	    	
+	    	<addElements caption="增加字段">
+	    	</addElements>
+	    	<tableElements caption="表节点">
+	    		<tableElement qualifiedName="md" tableName="t_mt_ems"/>
+	    	</tableElements>
+    	</getAllManagementDomains>
+    	
+    	<getAllCrossConnections caption="所有交叉连接" hint="">
+	    	<skipElementNameRegex><![CDATA[(?i)(header|body|get.+?request)]]></skipElementNameRegex>
+	    	
+	    	<aliass caption="别名">
+		    	<alise qualifiedName="aEndRefList" ailas="aEndName"/>
+		    	<alise qualifiedName="zEndRefList" ailas="zEndName"/>
+	    	</aliass>
+	    	
+	    	<addAttributes caption="增加属性" hint="比如：format='tz_time'、extends=''、type='skip'">
+	    	</addAttributes>
+	    	
+	    	<addElements caption="增加字段">
+	    		<addElement qualifiedName="snc" name="m_seq" value="" attributeMap="type=catt;alias=route_seq"/>
+	    		<addElement qualifiedName="aEndTpDataList.tpData" name="s_seq" value="" attributeMap="type=catt;alias=tp_seq"/>
+	    		<addElement qualifiedName="zEndTpDataList.tpData" name="s_seq" value="" attributeMap="type=catt;alias=_tp_end_type"/>
+	    	</addElements>
+	    	<tableElements caption="表节点">
+	    		<tableElement qualifiedName="cc" tableName="t_mt_crossconnection"/>
+	    	</tableElements>
+    	</getAllCrossConnections>
+    	
+    	<getAllPhysicalTerminationPoints caption="所有PTP" hint="">
+	    	<skipElementNameRegex><![CDATA[(?i)(header|body|get.+?request)]]></skipElementNameRegex>
+	    	
+	    	<aliass caption="别名">
+	    	</aliass>
+	    	
+	    	<addAttributes caption="增加属性" hint="比如：format='tz_time'、extends=''、type='skip'">
+	    	</addAttributes>
+	    	
+	    	<addElements caption="增加字段">
+	    	</addElements>
+	    	<tableElements caption="表节点">
+	    		<tableElement qualifiedName="ptp" tableName="t_mt_tp"/>
+	    		<tableElement qualifiedName="ftp" tableName="t_mt_tp"/>
+	    		<tableElement qualifiedName="ctp" tableName="t_mt_ctp"/>
+	    	</tableElements>
+    	</getAllPhysicalTerminationPoints>
+    	
+    	<getAllEquipment caption="所有设备" hint="">
+	    	<skipElementNameRegex><![CDATA[(?i)(header|body|get.+?request)]]></skipElementNameRegex>
+	    	
+	    	<aliass caption="别名">
+	    	</aliass>
+	    	
+	    	<addAttributes caption="增加属性" hint="比如：format='tz_time'、extends=''、type='skip'">
+	    	</addAttributes>
+	    	
+	    	<addElements caption="增加字段">
+	    	</addElements>
+	    	
+	    	<tableElements caption="表节点">
+	    		<tableElement qualifiedName="eq" tableName="t_mt_equipment"/>
+	    		<tableElement qualifiedName="eq" tableName="t_mt_equipmentholder"/>
+	    	</tableElements>
+	    	
+    	</getAllEquipment>
+    	
+    	<getAllSubnetworkConnections caption="所有电路" hint="">
+	    	<skipElementNameRegex><![CDATA[(?i)(header|body|get.+?request)]]></skipElementNameRegex>
+	    	
+	    	<aliass caption="别名">
+	    	</aliass>
+	    	
+	    	<addAttributes caption="增加属性" hint="比如：format='tz_time'、extends=''、type='skip'">
+	    		<addAttribute qualifiedName="aEndTpDataList" attributeMap="extends=name,m_seq;"/>
+	    		<addAttribute qualifiedName="zEndTpDataList" attributeMap="extends=name,m_seq;"/>
+	    	</addAttributes>
+	    	
+	    	<addElements caption="增加字段">
+	    		<addElement qualifiedName="snc" name="m_seq" value="" attributeMap="type=catt;alias=route_seq"/>
+	    		<addElement qualifiedName="aEndTpDataList.tpData" name="s_seq" value="" attributeMap="type=catt;alias=tp_seq"/>
+	    		<addElement qualifiedName="zEndTpDataList.tpData" name="s_seq" value="" attributeMap="type=catt;alias=_tp_end_type"/>
+	    	</addElements>
+	    	
+	    	<tableElements caption="表节点">
+	    		<tableElement qualifiedName="snc" tableName="t_mt_subnetworkconnection"/>
+	    		<tableElement qualifiedName="tpData" tableName="t_mt_snc_tp"/>
+	    	</tableElements>
+	    	
+    	</getAllSubnetworkConnections>
+    	
+    	<getAvailableTimeSlot caption="灵活时隙" hint="">
+	    	<skipElementNameRegex><![CDATA[(?i)(header|body|get.+?request)]]></skipElementNameRegex>
+	    	
+	    	<aliass caption="别名">
+	    	</aliass>
+	    	
+	    	<addAttributes caption="增加属性" hint="比如：format='tz_time'、extends=''、type='skip'">
+	    	</addAttributes>
+	    	
+	    	<addElements caption="增加字段">
+	    	</addElements>
+	    	
+	    	<tableElements caption="表节点">
+	    		<tableElement qualifiedName="getAvailableTimeSlotResponse" tableName="t_mt_timeslot"/>
+	    	</tableElements>
+	    	
+    	</getAvailableTimeSlot>
+    	
+    </base>
+  </bases>  
+  
+  <datasources caption="数据源" hint="一个或多个数据源配置"> 
+   <datasource id="mysql_ds" caption="通用安全管理" hint="数据库连接信息"> 
+      <pool default="proxool" caption="连接池" hint="数据库连接池，如果不配置连接池，则获取的是单连接"></pool>  
+      <driver default="sybase_ase" caption="数据源类型" 
+      relenum="db_drivers" 
+      hint="数据库类型枚举,请从以下常用类型之中选择:oracle/sybase_ase/sybase_iq/mysql/greenglumn/mssql"
+      >mysql</driver>  
+      <ip default="" caption="地址" hint="数据库IP地址">127.0.0.1</ip>  
+      <port default="" caption="端口" hint="数据库端口">3306</port>  
+      <dbname default="" caption="库名" hint="sybase填写数据库名、oracle填写sid">test</dbname>  
+      <username caption="登录名" hint="数据库登录名">root</username>  
+      <password caption="密码" hint="数据库登录密码">root</password>  
+      <charset default="cp936" caption="字符集" hint="数据库字符集"/>  
+      <jconnectVersion default="6" caption="连接等级" hint="sybase需要使用到的数据"/>  
+      <maxConnect default="1" caption="数据库连接数（最大）" hint="默认为15">50</maxConnect>  
+      <minConnect default="1" caption="数据库连接数（最小）" hint="默认为5">1</minConnect>  
+      <url default="" caption="数据库连接串" hint="如果配置了驱动项配置了cattDriver而且使用了JDBC4的数据库驱动包,URL配置一定得加前缀“cattproxy:”,如:cattproxy:jdbc:mysql://127.0.0.1:3306/test,其他情况不加">
+      jdbc:mysql://127.0.0.1:3306/test</url>  
+      <maxNewConnections default="10" caption="等待的连接数" hint="">10</maxNewConnections>  
+      <maxActiveTime default="" caption="连接活动的时间" hint="你的sql或存储过 程执行的时间,默认为5分钟">300000</maxActiveTime>  
+      <maxConnectionLifetime default="" caption="连接的寿命" hint="这个值理论上应该大于连接的活动时间限制,默认为1小时">3600000</maxConnectionLifetime> 
+      <simultaneousBuildThrottle caption="一次建立的最大连接数" hint="新增的连接请求,但还没有可供使用的连接,默认是10">30</simultaneousBuildThrottle>
+    </datasource>  
+    
+    <datasource id="oracle_ds" caption="通用安全管理" hint="数据库连接信息">
+      <pool default="proxool" caption="连接池" hint="数据库连接池，如果不配置连接池，则获取的是单连接"></pool>
+      <driver default="sybase_ase" caption="数据源类型" relenum="db_drivers"
+        hint="数据库类型枚举,请从以下常用类型之中选择:oracle/sybase_ase/sybase_iq/mysql/greenglumn/mssql">
+        oracle</driver>
+      <ip default="127.0.0.1" caption="地址" hint="数据库IP地址">172.168.27.6</ip>
+      <port default="3306" caption="端口" hint="数据库端口">1521</port>
+      <dbname default="test" caption="库名" hint="sybase填写数据库名、oracle填写sid">catt10g</dbname>
+      <username default="root" caption="登录名" hint="数据库登录名">zyxtdbln</username>
+      <password default="root" decaption="密码" hint="数据库登录密码">zyxtdbln</password>
+      <charset default="cp936" caption="字符集" hint="数据库字符集" >utf8</charset>
+      <jconnectVersion default="6" caption="连接等级"
+        hint="sybase需要使用到的数据" />
+      <maxConnect default="1" caption="数据库连接数（最大）" hint="默认为15">50
+      </maxConnect>
+      <minConnect default="1" caption="数据库连接数（最小）" hint="默认为5">1
+      </minConnect>
+      <url default="jdbc:mysql://127.0.0.1:3306/test" caption="数据库连接串"
+        hint="如果配置了驱动项配置了cattDriver而且使用了JDBC4的数据库驱动包,URL配置一定得加前缀“cattproxy:”,如:cattproxy:jdbc:mysql://127.0.0.1:3306/test,其他情况不加">
+       <!--  jdbc:mysql://172.168.10.7:3306/train -->
+      </url>
+      <maxNewConnections default="10" caption="等待的连接数"
+        hint="">10</maxNewConnections>
+      <maxActiveTime default="" caption="连接活动的时间"
+        hint="你的sql或存储过 程执行的时间,默认为5分钟">300000</maxActiveTime>
+      <maxConnectionLifetime default="" caption="连接的寿命"
+        hint="这个值理论上应该大于连接的活动时间限制,默认为1小时">3600000</maxConnectionLifetime>
+      <simultaneousBuildThrottle caption="一次建立的最大连接数"
+        hint="新增的连接请求,但还没有可供使用的连接,默认是10">30</simultaneousBuildThrottle>
+    </datasource>
+  </datasources>  
+  
+</config>

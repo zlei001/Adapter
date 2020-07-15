@@ -1,0 +1,222 @@
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.tmforum.org/mtop/fmw/xsd/hdr/v1" xmlns:v11="http://www.tmforum.org/mtop/mri/xsd/eir/v1" xmlns:v12="http://www.tmforum.org/mtop/nrf/xsd/eq-inv/v1" xmlns:v13="http://www.tmforum.org/mtop/nrf/xsd/eq/v1" xmlns:v14="http://www.tmforum.org/mtop/fmw/xsd/coi/v1" xmlns:v15="http://www.tmforum.org/mtop/fmw/xsd/nam/v1" xmlns:v16="http://www.tmforum.org/mtop/fmw/xsd/gen/v1" xmlns:v17="http://www.tmforum.org/mtop/nrb/xsd/cri/v1" xmlns:v18="http://www.tmforum.org/mtop/nrf/xsd/eh/v1">  
+    <soapenv:Header> 
+        <v1:header> 
+            <!--Optional:-->  
+            <v1:activityName>?</v1:activityName>  
+            <!--Optional:-->  
+            <v1:msgName>?</v1:msgName>  
+            <!--Optional:-->  
+            <v1:msgType>?</v1:msgType>  
+            <!--Optional:-->  
+            <v1:senderURI>?</v1:senderURI>  
+            <!--Optional:-->  
+            <v1:destinationURI>?</v1:destinationURI>  
+            <!--Optional:-->  
+            <v1:replyToURI>?</v1:replyToURI>  
+            <!--Optional:-->  
+            <v1:originatorURI>?</v1:originatorURI>  
+            <!--Optional:-->  
+            <v1:failureReplytoURI>?</v1:failureReplytoURI>  
+            <!--Optional:-->  
+            <v1:activityStatus qualifier="?">?</v1:activityStatus>  
+            <!--Optional:-->  
+            <v1:correlationId>?</v1:correlationId>  
+            <!--Optional:-->  
+            <v1:security>?</v1:security>  
+            <!--Optional:-->  
+            <v1:securityType>?</v1:securityType>  
+            <!--Optional:-->  
+            <v1:priority>?</v1:priority>  
+            <!--Optional:-->  
+            <v1:msgSpecificProperties type="nvs"> 
+                <!--Zero or more repetitions:-->  
+                <v1:property type="skList"> 
+                    <v1:propName>?</v1:propName>  
+                    <v1:propValue>?</v1:propValue> 
+                </v1:property> 
+            </v1:msgSpecificProperties>  
+            <!--Optional:-->  
+            <v1:communicationPattern>?</v1:communicationPattern>  
+            <!--Optional:-->  
+            <v1:communicationStyle>?</v1:communicationStyle>  
+            <!--Optional:-->  
+            <v1:requestedBatchSize>?</v1:requestedBatchSize>  
+            <!--Optional:-->  
+            <v1:batchSequenceNumber>?</v1:batchSequenceNumber>  
+            <!--Optional:-->  
+            <v1:batchSequenceEndOfReply>?</v1:batchSequenceEndOfReply>  
+            <!--Optional:-->  
+            <v1:iteratorReferenceURI>?</v1:iteratorReferenceURI>  
+            <!--Optional:-->  
+            <v1:fileLocationURI>?</v1:fileLocationURI>  
+            <!--Optional:-->  
+            <v1:compressionType extension="?">?</v1:compressionType>  
+            <!--Optional:-->  
+            <v1:packingType extension="?">?</v1:packingType>  
+            <!--Optional:-->  
+            <v1:timestamp>?</v1:timestamp>  
+            <!--Optional:-->  
+            <v1:vendorExtensions type="vEx"> 
+                <!--You may enter ANY elements at this point--> 
+            </v1:vendorExtensions> 
+        </v1:header> 
+    </soapenv:Header>  
+    <soapenv:Body> 
+        <v11:getAllEquipmentResponse type="m_table"> 
+            <!--Zero or more repetitions:-->  
+            <v12:eoh type="c_table"> 
+                <!--You have a CHOICE of the next 2 items at this level-->  
+                <v13:eq table="t_mt_equipmentholder"> 
+                    <!--Optional:-->  
+                    <v14:name type="nvs"> 
+                        <!--Zero or more repetitions:-->  
+                        <v15:rdn type="skList"> 
+                            <v15:type>?</v15:type>  
+                            <v15:value>?</v15:value> 
+                        </v15:rdn> 
+                    </v14:name>  
+                    <!--Optional:-->  
+                    <v14:userLabel>?</v14:userLabel>  
+                    <!--Optional:-->  
+                    <v14:discoveredName>?</v14:discoveredName>  
+                    <!--Optional:-->  
+                    <v14:namingOs>?</v14:namingOs>  
+                    <!--Optional:-->  
+                    <v14:owner>?</v14:owner>  
+                    <!--Optional:-->  
+                    <v14:aliasNameList type="nvs"> 
+                        <!--Zero or more repetitions:-->  
+                        <v16:alias type="skList"> 
+                            <v16:aliasName>?</v16:aliasName>  
+                            <v16:aliasValue>?</v16:aliasValue> 
+                        </v16:alias> 
+                    </v14:aliasNameList>  
+                    <!--Optional:-->  
+                    <v14:vendorExtensions type="vEx"> 
+                        <!--You may enter ANY elements at this point--> 
+                    </v14:vendorExtensions>  
+                    <!--Optional:-->  
+                    <v17:source qualifier="?">?</v17:source>  
+                    <!--Optional:-->  
+                    <v17:networkAccessDomain>?</v17:networkAccessDomain>  
+                    <!--Optional:-->  
+                    <v17:meiAttributes type="dkList"> 
+                        <!--Optional:-->  
+                        <v16:neTime>?</v16:neTime>  
+                        <v16:eventIndication>?</v16:eventIndication> 
+                    </v17:meiAttributes>  
+                    <!--Optional:-->  
+                    <v17:resourceState overlap="?" qualifier="?" extension="?">?</v17:resourceState>  
+                    <!--You may enter ANY elements at this point-->  
+                    <!--Optional:-->  
+                    <v13:isReportingAlarms>?</v13:isReportingAlarms>  
+                    <!--Optional:-->  
+                    <v13:expectedEquipmentObjectType>?</v13:expectedEquipmentObjectType>  
+                    <!--Optional:-->  
+                    <v13:installedEquipmentObjectType>?</v13:installedEquipmentObjectType>  
+                    <!--Optional:-->  
+                    <v13:installedPartNumber>?</v13:installedPartNumber>  
+                    <!--Optional:-->  
+                    <v13:installedSerialNumber>?</v13:installedSerialNumber>  
+                    <!--Optional:-->  
+                    <v13:resourceFulfillmentState>?</v13:resourceFulfillmentState>  
+                    <!--Optional:-->  
+                    <v13:installedVersion>?</v13:installedVersion>  
+                    <!--Optional:-->  
+                    <v13:manufacturer>?</v13:manufacturer>  
+                    <!--Optional:-->  
+                    <v13:protectionRole extension="?">?</v13:protectionRole>  
+                    <!--Optional:-->  
+                    <v13:protectionSchemeState extension="?">?</v13:protectionSchemeState>  
+                    <!--Optional:-->  
+                    <v13:manufactureDate>?</v13:manufactureDate>  
+                    <!--Optional:-->  
+                    <v13:asapRef type="nvs"> 
+                        <!--Zero or more repetitions:-->  
+                        <v15:rdn type="skList"> 
+                            <v15:type>?</v15:type>  
+                            <v15:value>?</v15:value> 
+                        </v15:rdn> 
+                    </v13:asapRef> 
+                </v13:eq>  
+                <v18:eh> 
+                    <!--Optional:-->  
+                    <v14:name type="nvs"> 
+                        <!--Zero or more repetitions:-->  
+                        <v15:rdn type="skList"> 
+                            <v15:type>?</v15:type>  
+                            <v15:value>?</v15:value> 
+                        </v15:rdn> 
+                    </v14:name>  
+                    <!--Optional:-->  
+                    <v14:userLabel>?</v14:userLabel>  
+                    <!--Optional:-->  
+                    <v14:discoveredName>?</v14:discoveredName>  
+                    <!--Optional:-->  
+                    <v14:namingOs>?</v14:namingOs>  
+                    <!--Optional:-->  
+                    <v14:owner>?</v14:owner>  
+                    <!--Optional:-->  
+                    <v14:aliasNameList type="nvs"> 
+                        <!--Zero or more repetitions:-->  
+                        <v16:alias type="skList"> 
+                            <v16:aliasName>?</v16:aliasName>  
+                            <v16:aliasValue>?</v16:aliasValue> 
+                        </v16:alias> 
+                    </v14:aliasNameList>  
+                    <!--Optional:-->  
+                    <v14:vendorExtensions type="vEx"> 
+                        <!--You may enter ANY elements at this point--> 
+                    </v14:vendorExtensions>  
+                    <!--Optional:-->  
+                    <v17:source qualifier="?">?</v17:source>  
+                    <!--Optional:-->  
+                    <v17:networkAccessDomain>?</v17:networkAccessDomain>  
+                    <!--Optional:-->  
+                    <v17:meiAttributes type="dkList"> 
+                        <!--Optional:-->  
+                        <v16:neTime>?</v16:neTime>  
+                        <v16:eventIndication>?</v16:eventIndication> 
+                    </v17:meiAttributes>  
+                    <!--Optional:-->  
+                    <v17:resourceState overlap="?" qualifier="?" extension="?">?</v17:resourceState>  
+                    <!--You may enter ANY elements at this point-->  
+                    <!--Optional:-->  
+                    <v18:isReportingAlarms>?</v18:isReportingAlarms>  
+                    <!--Optional:-->  
+                    <v18:holderType extension="?">?</v18:holderType>  
+                    <!--Optional:-->  
+                    <v18:acceptableEquipmentTypeList type="skList"> 
+                        <!--1 or more repetitions:-->  
+                        <v18:acceptableEquipmentType>?</v18:acceptableEquipmentType> 
+                    </v18:acceptableEquipmentTypeList>  
+                    <!--Optional:-->  
+                    <v18:expectedOrInstalledEquipmentRef type="nvs"> 
+                        <!--Zero or more repetitions:-->  
+                        <v15:rdn type="skList"> 
+                            <v15:type>?</v15:type>  
+                            <v15:value>?</v15:value> 
+                        </v15:rdn> 
+                    </v18:expectedOrInstalledEquipmentRef>  
+                    <!--Optional:-->  
+                    <v18:holderState>?</v18:holderState>  
+                    <!--Optional:-->  
+                    <v18:location>?</v18:location>  
+                    <!--Optional:-->  
+                    <v18:manufacturer>?</v18:manufacturer>  
+                    <!--Optional:-->  
+                    <v18:manufactureDate>?</v18:manufactureDate>  
+                    <!--Optional:-->  
+                    <v18:asapRef type="nvs"> 
+                        <!--Zero or more repetitions:-->  
+                        <v15:rdn type="skList"> 
+                            <v15:type>?</v15:type>  
+                            <v15:value>?</v15:value> 
+                        </v15:rdn> 
+                    </v18:asapRef> 
+                </v18:eh> 
+            </v12:eoh> 
+        </v11:getAllEquipmentResponse> 
+    </soapenv:Body> 
+</soapenv:Envelope>

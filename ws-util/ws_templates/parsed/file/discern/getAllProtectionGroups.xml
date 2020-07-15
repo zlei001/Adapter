@@ -1,0 +1,178 @@
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.tmforum.org/mtop/fmw/xsd/hdr/v1" xmlns:v11="http://www.tmforum.org/mtop/rtm/xsd/pr/v1" xmlns:v12="http://www.tmforum.org/mtop/nra/xsd/pg/v1" xmlns:v13="http://www.tmforum.org/mtop/fmw/xsd/coi/v1" xmlns:v14="http://www.tmforum.org/mtop/fmw/xsd/nam/v1" xmlns:v15="http://www.tmforum.org/mtop/fmw/xsd/gen/v1" xmlns:v16="http://www.tmforum.org/mtop/nrb/xsd/cri/v1" xmlns:v17="http://www.tmforum.org/mtop/nra/xsd/pgp/v1">  
+    <soapenv:Header> 
+        <v1:header> 
+            <!--Optional:-->  
+            <v1:activityName>?</v1:activityName>  
+            <!--Optional:-->  
+            <v1:msgName>?</v1:msgName>  
+            <!--Optional:-->  
+            <v1:msgType>?</v1:msgType>  
+            <!--Optional:-->  
+            <v1:senderURI>?</v1:senderURI>  
+            <!--Optional:-->  
+            <v1:destinationURI>?</v1:destinationURI>  
+            <!--Optional:-->  
+            <v1:replyToURI>?</v1:replyToURI>  
+            <!--Optional:-->  
+            <v1:originatorURI>?</v1:originatorURI>  
+            <!--Optional:-->  
+            <v1:failureReplytoURI>?</v1:failureReplytoURI>  
+            <!--Optional:-->  
+            <v1:activityStatus qualifier="?">?</v1:activityStatus>  
+            <!--Optional:-->  
+            <v1:correlationId>?</v1:correlationId>  
+            <!--Optional:-->  
+            <v1:security>?</v1:security>  
+            <!--Optional:-->  
+            <v1:securityType>?</v1:securityType>  
+            <!--Optional:-->  
+            <v1:priority>?</v1:priority>  
+            <!--Optional:-->  
+            <v1:msgSpecificProperties type="nvs"> 
+                <!--Zero or more repetitions:-->  
+                <v1:property type="skList"> 
+                    <v1:propName>?</v1:propName>  
+                    <v1:propValue>?</v1:propValue> 
+                </v1:property> 
+            </v1:msgSpecificProperties>  
+            <!--Optional:-->  
+            <v1:communicationPattern>?</v1:communicationPattern>  
+            <!--Optional:-->  
+            <v1:communicationStyle>?</v1:communicationStyle>  
+            <!--Optional:-->  
+            <v1:requestedBatchSize>?</v1:requestedBatchSize>  
+            <!--Optional:-->  
+            <v1:batchSequenceNumber>?</v1:batchSequenceNumber>  
+            <!--Optional:-->  
+            <v1:batchSequenceEndOfReply>?</v1:batchSequenceEndOfReply>  
+            <!--Optional:-->  
+            <v1:iteratorReferenceURI>?</v1:iteratorReferenceURI>  
+            <!--Optional:-->  
+            <v1:fileLocationURI>?</v1:fileLocationURI>  
+            <!--Optional:-->  
+            <v1:compressionType extension="?">?</v1:compressionType>  
+            <!--Optional:-->  
+            <v1:packingType extension="?">?</v1:packingType>  
+            <!--Optional:-->  
+            <v1:timestamp>?</v1:timestamp>  
+            <!--Optional:-->  
+            <v1:vendorExtensions type="vEx"> 
+                <!--You may enter ANY elements at this point--> 
+            </v1:vendorExtensions> 
+        </v1:header> 
+    </soapenv:Header>  
+    <soapenv:Body> 
+        <v11:getAllProtectionGroupsResponse> 
+            <!--Optional:-->  
+            <v11:pgList> 
+                <!--Zero or more repetitions:-->  
+                <v12:pg> 
+                    <!--Optional:-->  
+                    <v13:name type="nvs"> 
+                        <!--Zero or more repetitions:-->  
+                        <v14:rdn type="skList"> 
+                            <v14:type>?</v14:type>  
+                            <v14:value>?</v14:value> 
+                        </v14:rdn> 
+                    </v13:name>  
+                    <!--Optional:-->  
+                    <v13:userLabel>?</v13:userLabel>  
+                    <!--Optional:-->  
+                    <v13:discoveredName>?</v13:discoveredName>  
+                    <!--Optional:-->  
+                    <v13:namingOs>?</v13:namingOs>  
+                    <!--Optional:-->  
+                    <v13:owner>?</v13:owner>  
+                    <!--Optional:-->  
+                    <v13:aliasNameList type="nvs"> 
+                        <!--Zero or more repetitions:-->  
+                        <v15:alias type="skList"> 
+                            <v15:aliasName>?</v15:aliasName>  
+                            <v15:aliasValue>?</v15:aliasValue> 
+                        </v15:alias> 
+                    </v13:aliasNameList>  
+                    <!--Optional:-->  
+                    <v13:vendorExtensions type="vEx"> 
+                        <!--You may enter ANY elements at this point--> 
+                    </v13:vendorExtensions>  
+                    <!--Optional:-->  
+                    <v16:source qualifier="?">?</v16:source>  
+                    <!--Optional:-->  
+                    <v16:networkAccessDomain>?</v16:networkAccessDomain>  
+                    <!--Optional:-->  
+                    <v16:meiAttributes type="dkList"> 
+                        <!--Optional:-->  
+                        <v15:neTime>?</v15:neTime>  
+                        <v15:eventIndication>?</v15:eventIndication> 
+                    </v16:meiAttributes>  
+                    <!--Optional:-->  
+                    <v16:resourceState overlap="?" qualifier="?" extension="?">?</v16:resourceState>  
+                    <!--You may enter ANY elements at this point-->  
+                    <!--Optional:-->  
+                    <v12:type extension="?">?</v12:type>  
+                    <!--Optional:-->  
+                    <v12:protectionSchemeState extension="?">?</v12:protectionSchemeState>  
+                    <!--Optional:-->  
+                    <v12:reversionMode>?</v12:reversionMode>  
+                    <!--Optional:-->  
+                    <v12:layerRate extension="?">?</v12:layerRate>  
+                    <!--Optional:-->  
+                    <v12:parameterList type="dkList"> 
+                        <!--Optional:-->  
+                        <v17:switchMode extension="?">?</v17:switchMode>  
+                        <!--Optional:-->  
+                        <v17:springProtocol extension="?">?</v17:springProtocol>  
+                        <!--Optional:-->  
+                        <v17:springNodeId>?</v17:springNodeId>  
+                        <!--Optional:-->  
+                        <v17:switchPosition>?</v17:switchPosition>  
+                        <!--Optional:-->  
+                        <v17:nonPreEmptibleTraffic>?</v17:nonPreEmptibleTraffic>  
+                        <!--Optional:-->  
+                        <v17:wtrTime>?</v17:wtrTime>  
+                        <!--Optional:-->  
+                        <v17:holdOffTime>?</v17:holdOffTime>  
+                        <!--Optional:-->  
+                        <v17:lodNumSwitches>?</v17:lodNumSwitches>  
+                        <!--Optional:-->  
+                        <v17:lodDuration>?</v17:lodDuration>  
+                        <!--Optional:-->  
+                        <v17:tandemSwitching>?</v17:tandemSwitching>  
+                        <!--Optional:-->  
+                        <v17:bundleSwitching>?</v17:bundleSwitching>  
+                        <!--Optional:-->  
+                        <v17:hitless>?</v17:hitless>  
+                        <!--Optional:-->  
+                        <v17:exerciseOn>?</v17:exerciseOn>  
+                        <!--Optional:-->  
+                        <v17:availabilityStatus extension="?">?</v17:availabilityStatus>  
+                        <!--Optional:-->  
+                        <v17:switchCriteriaEnable extension="?">?</v17:switchCriteriaEnable>  
+                        <!--Optional:-->  
+                        <v17:privilegedChannel>?</v17:privilegedChannel>  
+                        <!--Optional:-->  
+                        <v17:vendorExtensions type="vEx"> 
+                            <!--You may enter ANY elements at this point--> 
+                        </v17:vendorExtensions> 
+                    </v12:parameterList>  
+                    <!--Optional:-->  
+                    <v12:protectionRelatedTpRefList type="nvs2"> 
+                        <!--Zero or more repetitions:-->  
+                        <v14:name type="nvs"> 
+                            <!--Zero or more repetitions:-->  
+                            <v14:rdn type="skList"> 
+                                <v14:type>?</v14:type>  
+                                <v14:value>?</v14:value> 
+                            </v14:rdn> 
+                        </v14:name> 
+                    </v12:protectionRelatedTpRefList>  
+                    <!--Optional:-->  
+                    <v12:apsProtocolType extension="?">?</v12:apsProtocolType>  
+                    <!--Optional:-->  
+                    <v12:asapRef>?</v12:asapRef> 
+                </v12:pg> 
+            </v11:pgList> 
+        </v11:getAllProtectionGroupsResponse> 
+    </soapenv:Body> 
+</soapenv:Envelope>

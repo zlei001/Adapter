@@ -1,0 +1,356 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.tmforum.org/mtop/fmw/xsd/hdr/v1" xmlns:v11="http://www.tmforum.org/mtop/mri/xsd/tpr/v1" xmlns:v12="http://www.tmforum.org/mtop/nrf/xsd/tp/v1" xmlns:v13="http://www.tmforum.org/mtop/nrf/xsd/ptp/v1" xmlns:v14="http://www.tmforum.org/mtop/fmw/xsd/coi/v1" xmlns:v15="http://www.tmforum.org/mtop/fmw/xsd/nam/v1" xmlns:v16="http://www.tmforum.org/mtop/fmw/xsd/gen/v1" xmlns:v17="http://www.tmforum.org/mtop/nrb/xsd/cri/v1" xmlns:v18="http://www.tmforum.org/mtop/nrb/xsd/lp/v1" xmlns:v19="http://www.tmforum.org/mtop/nrf/xsd/ftp/v1" xmlns:v110="http://www.tmforum.org/mtop/nrf/xsd/ctp/v1">
+   <soapenv:Header>
+      <v1:header>
+         <!--Optional:-->
+         <v1:activityName>?</v1:activityName>
+         <!--Optional:-->
+         <v1:msgName>?</v1:msgName>
+         <!--Optional:-->
+         <v1:msgType>?</v1:msgType>
+         <!--Optional:-->
+         <v1:senderURI>?</v1:senderURI>
+         <!--Optional:-->
+         <v1:destinationURI>?</v1:destinationURI>
+         <!--Optional:-->
+         <v1:replyToURI>?</v1:replyToURI>
+         <!--Optional:-->
+         <v1:originatorURI>?</v1:originatorURI>
+         <!--Optional:-->
+         <v1:failureReplytoURI>?</v1:failureReplytoURI>
+         <!--Optional:-->
+         <v1:activityStatus qualifier="?">?</v1:activityStatus>
+         <!--Optional:-->
+         <v1:correlationId>?</v1:correlationId>
+         <!--Optional:-->
+         <v1:security>?</v1:security>
+         <!--Optional:-->
+         <v1:securityType>?</v1:securityType>
+         <!--Optional:-->
+         <v1:priority>?</v1:priority>
+         <!--Optional:-->
+         <v1:msgSpecificProperties type="nvs">
+            <!--Zero or more repetitions:-->
+            <v1:property type="skList">
+               <v1:propName>?</v1:propName>
+               <v1:propValue>?</v1:propValue>
+            </v1:property>
+         </v1:msgSpecificProperties>
+         <!--Optional:-->
+         <v1:communicationPattern>?</v1:communicationPattern>
+         <!--Optional:-->
+         <v1:communicationStyle>?</v1:communicationStyle>
+         <!--Optional:-->
+         <v1:requestedBatchSize>?</v1:requestedBatchSize>
+         <!--Optional:-->
+         <v1:batchSequenceNumber>?</v1:batchSequenceNumber>
+         <!--Optional:-->
+         <v1:batchSequenceEndOfReply>?</v1:batchSequenceEndOfReply>
+         <!--Optional:-->
+         <v1:iteratorReferenceURI>?</v1:iteratorReferenceURI>
+         <!--Optional:-->
+         <v1:fileLocationURI>?</v1:fileLocationURI>
+         <!--Optional:-->
+         <v1:compressionType extension="?">?</v1:compressionType>
+         <!--Optional:-->
+         <v1:packingType extension="?">?</v1:packingType>
+         <!--Optional:-->
+         <v1:timestamp>?</v1:timestamp>
+         <!--Optional:-->
+         <v1:vendorExtensions type="vEx">
+            <!--You may enter ANY elements at this point-->
+         </v1:vendorExtensions>
+      </v1:header>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v11:getAllPhysicalTerminationPointsResponse>
+         <!--Optional:-->
+         <v11:tpList type="m_table">
+            <!--Zero or more repetitions:-->
+            <v12:tp type="c_table">
+               <!--You have a CHOICE of the next 3 items at this level-->
+               <v13:ptp table="t_mt_tp">
+                  <!--Optional:-->
+                  <v14:name type="nvs">
+                     <!--Zero or more repetitions:-->
+                     <v15:rdn type="skList">
+                        <v15:type>?</v15:type>
+                        <v15:value>?</v15:value>
+                     </v15:rdn>
+                  </v14:name>
+                  <!--Optional:-->
+                  <v14:userLabel>?</v14:userLabel>
+                  <!--Optional:-->
+                  <v14:discoveredName>?</v14:discoveredName>
+                  <!--Optional:-->
+                  <v14:namingOs>?</v14:namingOs>
+                  <!--Optional:-->
+                  <v14:owner>?</v14:owner>
+                  <!--Optional:-->
+                  <v14:aliasNameList type="nvs">
+                     <!--Zero or more repetitions:-->
+                     <v16:alias type="skList">
+                        <v16:aliasName>?</v16:aliasName>
+                        <v16:aliasValue>?</v16:aliasValue>
+                     </v16:alias>
+                  </v14:aliasNameList>
+                  <!--Optional:-->
+                  <v14:vendorExtensions type="vEx">
+                     <!--You may enter ANY elements at this point-->
+                  </v14:vendorExtensions>
+                  <!--Optional:-->
+                  <v17:source qualifier="?">?</v17:source>
+                  <!--Optional:-->
+                  <v17:networkAccessDomain>?</v17:networkAccessDomain>
+                  <!--Optional:-->
+                  <v17:meiAttributes type="dkList">
+                     <!--Optional:-->
+                     <v16:neTime>?</v16:neTime>
+                     <v16:eventIndication>?</v16:eventIndication>
+                  </v17:meiAttributes>
+                  <!--Optional:-->
+                  <v17:resourceState overlap="?" qualifier="?" extension="?">?</v17:resourceState>
+                  <!--You may enter ANY elements at this point-->
+                  <!--Optional:-->
+                  <v13:direction>?</v13:direction>
+                  <!--Optional:-->
+                  <v13:tpProtectionAssociation>?</v13:tpProtectionAssociation>
+                  <!--Optional:-->
+                  <v13:isEdgePoint>?</v13:isEdgePoint>
+                  <!--Optional:-->
+                  <v13:isEquipmentProtected>?</v13:isEquipmentProtected>
+                  <!--Optional:-->
+                  <v13:egressTmdState>?</v13:egressTmdState>
+                  <!--Optional:-->
+                  <v13:ingressTmdState>?</v13:ingressTmdState>
+                  <!--Optional:-->
+                  <v13:ingressTmdRef type="nvs">
+                     <!--Zero or more repetitions:-->
+                     <v15:rdn type="skList">
+                        <v15:type>?</v15:type>
+                        <v15:value>?</v15:value>
+                     </v15:rdn>
+                  </v13:ingressTmdRef>
+                  <!--Optional:-->
+                  <v13:egressTmdRef type="nvs">
+                     <!--Zero or more repetitions:-->
+                     <v15:rdn type="skList">
+                        <v15:type>?</v15:type>
+                        <v15:value>?</v15:value>
+                     </v15:rdn>
+                  </v13:egressTmdRef>
+                  <!--Optional:-->
+                  <v18:transmissionParametersList type="tpList">
+                     <!--Zero or more repetitions:-->
+                     <v18:transmissionParameters>
+                        <!--Optional:-->
+                        <v18:layerRate extension="?">?</v18:layerRate>
+                        <!--Optional:-->
+                        <v18:parameterList type="nvs">
+                           <!--Zero or more repetitions:-->
+                           <v16:nvs type="skList">
+                              <v16:name>?</v16:name>
+                              <v16:value>?</v16:value>
+                           </v16:nvs>
+                        </v18:parameterList>
+                        <!--Optional:-->
+                        <v18:vendorExtensions type="vEx">
+                           <!--You may enter ANY elements at this point-->
+                        </v18:vendorExtensions>
+                     </v18:transmissionParameters>
+                  </v18:transmissionParametersList>
+               </v13:ptp>
+               <v19:ftp table="t_mt_tp">
+                  <!--Optional:-->
+                  <v14:name type="nvs">
+                     <!--Zero or more repetitions:-->
+                     <v15:rdn type="skList">
+                        <v15:type>?</v15:type>
+                        <v15:value>?</v15:value>
+                     </v15:rdn>
+                  </v14:name>
+                  <!--Optional:-->
+                  <v14:userLabel>?</v14:userLabel>
+                  <!--Optional:-->
+                  <v14:discoveredName>?</v14:discoveredName>
+                  <!--Optional:-->
+                  <v14:namingOs>?</v14:namingOs>
+                  <!--Optional:-->
+                  <v14:owner>?</v14:owner>
+                  <!--Optional:-->
+                  <v14:aliasNameList type="nvs">
+                     <!--Zero or more repetitions:-->
+                     <v16:alias type="skList">
+                        <v16:aliasName>?</v16:aliasName>
+                        <v16:aliasValue>?</v16:aliasValue>
+                     </v16:alias>
+                  </v14:aliasNameList>
+                  <!--Optional:-->
+                  <v14:vendorExtensions type="vEx">
+                     <!--You may enter ANY elements at this point-->
+                  </v14:vendorExtensions>
+                  <!--Optional:-->
+                  <v17:source qualifier="?">?</v17:source>
+                  <!--Optional:-->
+                  <v17:networkAccessDomain>?</v17:networkAccessDomain>
+                  <!--Optional:-->
+                  <v17:meiAttributes type="dkList">
+                     <!--Optional:-->
+                     <v16:neTime>?</v16:neTime>
+                     <v16:eventIndication>?</v16:eventIndication>
+                  </v17:meiAttributes>
+                  <!--Optional:-->
+                  <v17:resourceState overlap="?" qualifier="?" extension="?">?</v17:resourceState>
+                  <!--You may enter ANY elements at this point-->
+                  <!--Optional:-->
+                  <v19:direction>?</v19:direction>
+                  <!--Optional:-->
+                  <v19:tpProtectionAssociation>?</v19:tpProtectionAssociation>
+                  <!--Optional:-->
+                  <v19:isEdgePoint>?</v19:isEdgePoint>
+                  <!--Optional:-->
+                  <v19:isEquipmentProtected>?</v19:isEquipmentProtected>
+                  <!--Optional:-->
+                  <v19:egressTmdState>?</v19:egressTmdState>
+                  <!--Optional:-->
+                  <v19:ingressTmdState>?</v19:ingressTmdState>
+                  <!--Optional:-->
+                  <v19:connectionState>?</v19:connectionState>
+                  <!--Optional:-->
+                  <v19:tpMappingMode>?</v19:tpMappingMode>
+                  <!--Optional:-->
+                  <v19:ingressTmdRef type="nvs">
+                     <!--Zero or more repetitions:-->
+                     <v15:rdn type="skList">
+                        <v15:type>?</v15:type>
+                        <v15:value>?</v15:value>
+                     </v15:rdn>
+                  </v19:ingressTmdRef>
+                  <!--Optional:-->
+                  <v19:egressTmdRef type="nvs">
+                     <!--Zero or more repetitions:-->
+                     <v15:rdn type="skList">
+                        <v15:type>?</v15:type>
+                        <v15:value>?</v15:value>
+                     </v15:rdn>
+                  </v19:egressTmdRef>
+                  <!--Optional:-->
+                  <v18:transmissionParametersList type="tpList">
+                     <!--Zero or more repetitions:-->
+                     <v18:transmissionParameters>
+                        <!--Optional:-->
+                        <v18:layerRate extension="?">?</v18:layerRate>
+                        <!--Optional:-->
+                        <v18:parameterList type="nvs">
+                           <!--Zero or more repetitions:-->
+                           <v16:nvs type="skList">
+                              <v16:name>?</v16:name>
+                              <v16:value>?</v16:value>
+                           </v16:nvs>
+                        </v18:parameterList>
+                        <!--Optional:-->
+                        <v18:vendorExtensions type="vEx">
+                           <!--You may enter ANY elements at this point-->
+                        </v18:vendorExtensions>
+                     </v18:transmissionParameters>
+                  </v18:transmissionParametersList>
+               </v19:ftp>
+               <v110:ctp table="t_mt_ctp">
+                  <!--Optional:-->
+                  <v14:name type="nvs">
+                     <!--Zero or more repetitions:-->
+                     <v15:rdn type="skList">
+                        <v15:type>?</v15:type>
+                        <v15:value>?</v15:value>
+                     </v15:rdn>
+                  </v14:name>
+                  <!--Optional:-->
+                  <v14:userLabel>?</v14:userLabel>
+                  <!--Optional:-->
+                  <v14:discoveredName>?</v14:discoveredName>
+                  <!--Optional:-->
+                  <v14:namingOs>?</v14:namingOs>
+                  <!--Optional:-->
+                  <v14:owner>?</v14:owner>
+                  <!--Optional:-->
+                  <v14:aliasNameList type="nvs">
+                     <!--Zero or more repetitions:-->
+                     <v16:alias type="skList">
+                        <v16:aliasName>?</v16:aliasName>
+                        <v16:aliasValue>?</v16:aliasValue>
+                     </v16:alias>
+                  </v14:aliasNameList>
+                  <!--Optional:-->
+                  <v14:vendorExtensions type="vEx">
+                     <!--You may enter ANY elements at this point-->
+                  </v14:vendorExtensions>
+                  <!--Optional:-->
+                  <v17:source qualifier="?">?</v17:source>
+                  <!--Optional:-->
+                  <v17:networkAccessDomain>?</v17:networkAccessDomain>
+                  <!--Optional:-->
+                  <v17:meiAttributes type="dkList">
+                     <!--Optional:-->
+                     <v16:neTime>?</v16:neTime>
+                     <v16:eventIndication>?</v16:eventIndication>
+                  </v17:meiAttributes>
+                  <!--Optional:-->
+                  <v17:resourceState overlap="?" qualifier="?" extension="?">?</v17:resourceState>
+                  <!--You may enter ANY elements at this point-->
+                  <!--Optional:-->
+                  <v110:direction>?</v110:direction>
+                  <!--Optional:-->
+                  <v110:tpProtectionAssociation>?</v110:tpProtectionAssociation>
+                  <!--Optional:-->
+                  <v110:isEdgePoint>?</v110:isEdgePoint>
+                  <!--Optional:-->
+                  <v110:isEquipmentProtected>?</v110:isEquipmentProtected>
+                  <!--Optional:-->
+                  <v110:egressTmdState>?</v110:egressTmdState>
+                  <!--Optional:-->
+                  <v110:ingressTmdState>?</v110:ingressTmdState>
+                  <!--Optional:-->
+                  <v110:connectionState>?</v110:connectionState>
+                  <!--Optional:-->
+                  <v110:tpMappingMode>?</v110:tpMappingMode>
+                  <!--Optional:-->
+                  <v110:ingressTmdRef type="nvs">
+                     <!--Zero or more repetitions:-->
+                     <v15:rdn type="skList">
+                        <v15:type>?</v15:type>
+                        <v15:value>?</v15:value>
+                     </v15:rdn>
+                  </v110:ingressTmdRef>
+                  <!--Optional:-->
+                  <v110:egressTmdRef type="nvs">
+                     <!--Zero or more repetitions:-->
+                     <v15:rdn type="skList">
+                        <v15:type>?</v15:type>
+                        <v15:value>?</v15:value>
+                     </v15:rdn>
+                  </v110:egressTmdRef>
+                  <!--Optional:-->
+                  <v18:transmissionParametersList type="tpList">
+                     <!--Zero or more repetitions:-->
+                     <v18:transmissionParameters>
+                        <!--Optional:-->
+                        <v18:layerRate extension="?">?</v18:layerRate>
+                        <!--Optional:-->
+                        <v18:parameterList type="nvs">
+                           <!--Zero or more repetitions:-->
+                           <v16:nvs type="skList">
+                              <v16:name>?</v16:name>
+                              <v16:value>?</v16:value>
+                           </v16:nvs>
+                        </v18:parameterList>
+                        <!--Optional:-->
+                        <v18:vendorExtensions type="vEx">
+                           <!--You may enter ANY elements at this point-->
+                        </v18:vendorExtensions>
+                     </v18:transmissionParameters>
+                  </v18:transmissionParametersList>
+               </v110:ctp>
+            </v12:tp>
+         </v11:tpList>
+      </v11:getAllPhysicalTerminationPointsResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
